@@ -1,25 +1,15 @@
 .footer {
-  background: lgreen;
+  background: #4E8483;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  justify-content: flex-end;
+  height: 94px;
   padding: 0px 50px;
-  color: black;
 }
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer .fa-heart {
-  color: black;
+
+.footer-item {
+  font-size: 20px;
+  color: white;
+  background: lgreen;
+  border: 0px;
 }
