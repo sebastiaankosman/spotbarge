@@ -14,154 +14,153 @@ puts 'Creating barge...'
 
 users_attributes = [
   {
-    first_name: 'Sebastiaan'
-    last_name: 'Kosman'
+    first_name: 'Sebastiaan',
+    last_name: 'Kosman',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'sebastiaankosman@gmail.com',
-    ice_chat: 'Sebastiaan_ICE'
-    company_name: 'Shell'
-    type_of_company: 'Oilsupplier'
-    city: 'Rotterdam'
-    country: 'The Netherlands'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'Sebastiaan_ICE',
+    company_name: 'Shell',
+    type_of_company: 'Oilsupplier',
+    city: 'Rotterdam',
+    country: 'The Netherlands',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'no'
-
   },
   {
-    first_name: 'Onne'
-    last_name: 'Bakker'
+    first_name: 'Onne',
+    last_name: 'Bakker',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'onnebakker@gmail.com',
-    ice_chat: 'Onne_ICE'
+    ice_chat: 'Onne_ICE',
     company_name: 'Vitol'
-    type_of_company: 'Oilsupplier'
-    city: 'Rotterdam'
-    country: 'The Netherlands'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    type_of_company: 'Oilsupplier',
+    city: 'Rotterdam',
+    country: 'The Netherlands',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'no'
   },
   {
-    first_name: 'Djongjin'
-    last_name: 'Lee'
+    first_name: 'Djongjin',
+    last_name: 'Lee',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'Djongjin@gmail.com',
-    ice_chat: 'Djongjin_ICE'
-    company_name: 'Glencore'
-    type_of_company: 'Oilsupplier'
-    city: 'London'
-    country: 'The Netherlands'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'Djongjin_ICE',
+    company_name: 'Glencore',
+    type_of_company: 'Oilsupplier',
+    city: 'London',
+    country: 'The Netherlands',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'Yes'
   },
   {
-    first_name: 'Ruud'
-    last_name: 'Bussink'
+    first_name: 'Ruud',
+    last_name: 'Bussink',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'ruud@gmail.com',
-    ice_chat: 'ruud_ICE'
-    company_name: 'ExxonMobil'
-    type_of_company: 'Oilsupplier'
-    city: 'Antwerp'
-    country: 'The Netherlands'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'ruud_ICE',
+    company_name: 'ExxonMobil',
+    type_of_company: 'Oilsupplier',
+    city: 'Antwerp',
+    country: 'The Netherlands',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'Yes'
   },
   {
-    first_name: 'Olivia'
-    last_name: 'Lara'
+    first_name: 'Olivia',
+    last_name: 'Lara',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'olivia@gmail.com',
-    ice_chat: 'olivia_ICE'
-    company_name: 'BP'
-    type_of_company: 'Oilsupplier'
-    city: 'Rotterdam'
-    country: 'The Netherlands'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'olivia_ICE',
+    company_name: 'BP',
+    type_of_company: 'Oilsupplier',
+    city: 'Rotterdam',
+    country: 'The Netherlands',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'Yes'
   },
   {
-    first_name: 'Jos'
-    last_name: 'Molernaar'
+    first_name: 'Jos',
+    last_name: 'Molernaar',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'josn@gmail.com',
-    ice_chat: 'jos_ICE'
-    company_name: 'Interstream'
-    type_of_company: 'Broker'
-    city: 'Rotterdam'
-    country: 'The Netherlands'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'jos_ICE',
+    company_name: 'Interstream',
+    type_of_company: 'Broker',
+    city: 'Rotterdam',
+    country: 'The Netherlands',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'no'
   },
   {
-    first_name: 'Peter'
-    last_name: 'Steutel'
+    first_name: 'Peter',
+    last_name: 'Steutel',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'peter@gmail.com',
-    ice_chat: 'peter_ICE'
-    company_name: 'Victrol'
-    type_of_company: 'Broker'
-    city: 'Antwerp'
+    ice_chat: 'peter_ICE',
+    company_name: 'Victrol',
+    type_of_company: 'Broker',
+    city: 'Antwerp',
     country: 'Belgium'
-    phonenumber: '123456789'
-    notification_email: 'yes'
-    notification_sms: 'no'
+    phonenumber: '123456789',
+    notification_email: 'yes',
+    notification_sms: 'no',
   },
   {
-    first_name: 'Yessi'
-    last_name: 'van der Waal'
+    first_name: 'Yessi',
+    last_name: 'van der Waal',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'Yessi@gmail.com',
-    ice_chat: 'yessi_ICE'
-    company_name: 'Unibarge'
-    type_of_company: 'Broker'
-    city: 'Rotterdam'
-    country: 'The Netherlands'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'yessi_ICE',
+    company_name: 'Unibarge',
+    type_of_company: 'Broker',
+    city: 'Rotterdam',
+    country: 'The Netherlands',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'Yes'
   },
   {
-    first_name: 'Karin'
-    last_name: 'Grotenhuis'
+    first_name: 'Karin',
+    last_name: 'Grotenhuis',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'karin@gmail.com',
-    ice_chat: 'karin_ICE'
-    company_name: 'Gefo'
-    type_of_company: 'Broker'
-    city: 'Hamburg'
-    country: 'Germany'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'karin_ICE',
+    company_name: 'Gefo',
+    type_of_company: 'Broker',
+    city: 'Hamburg',
+    country: 'Germany',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'Yes'
   },
   {
-    first_name: 'Benna'
-    last_name: 'Talahatu'
+    first_name: 'Benna',
+    last_name: 'Talahatu',
     password: '123456',
-    reset_password_token: '1ajfeijfqw'
+    reset_password_token: '1ajfeijfqw',
     email: 'benna@gmail.com',
-    ice_chat: 'benna_ICE'
-    company_name: 'Stetra'
-    type_of_company: 'Broker'
-    city: 'Ludwigshafen'
-    country: 'Germany'
-    phonenumber: '123456789'
-    notification_email: 'yes'
+    ice_chat: 'benna_ICE',
+    company_name: 'Stetra',
+    type_of_company: 'Broker',
+    city: 'Ludwigshafen',
+    country: 'Germany',
+    phonenumber: '123456789',
+    notification_email: 'yes',
     notification_sms: 'Yes'
   }
 ]
