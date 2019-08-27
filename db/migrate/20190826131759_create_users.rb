@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :ice_chat
       t.string :company_name
       t.string :type_of_company
-      t.string :location
+      t.string :country
       t.string :phone_number
       t.string :city
       t.boolean :notification_email
