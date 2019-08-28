@@ -1,1 +1,56 @@
-_buttons.scss
+.btn-back-login {
+  color: #4A4A4A;
+  font-size: 20px;
+  background-color: #EDF5FB;
+  padding: 8px 24px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 234px;
+  height: 71px;
+}
+
+.btn-back-login:hover {
+  opacity: 0.6;
+}
+
+.btn-forward-login {
+  color: #4A4A4A;
+  font-size: 20px;
+  background-color: #F7DB64;
+  padding: 8px 24px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 234px;
+  height: 71px;
+}
+
+.btn-forward-login:hover {
+  opacity: 0.6;
+}
+
+.btn-home {
+  color: #4A4A4A;
+  font-size: 18px;
+  background-color: #F7DB64;
+  padding: 8px 24px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 250px;
+  height: 69px;
+}
+
+.btn-home:hover {
+  opacity: 0.6;
+}

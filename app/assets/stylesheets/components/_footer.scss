@@ -1,5 +1,5 @@
 .footer {
-  background: #4E8483;
+  background: $lgreen;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -10,6 +10,6 @@
 .footer-item {
   font-size: 20px;
   color: white;
-  background: lgreen;
+  background: $lgreen;
   border: 0px;
 }

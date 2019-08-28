@@ -1,12 +1,54 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  background: $dgreen;
+  height: 99px;
+  padding: 0px 50px;
+  padding-right: 0px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-home {
+  position: fixed;
+  display: sticky;
+  z-index: 2;
+  width: 100%;
+  background: rgba(244, 244, 244, 0.0);
+  height: 99px;
+  padding: 0px 50px;
+  padding-right: 0px;
+  .navbar-item {
+    background: rgba(244, 244, 244, 0.0) !important;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+  color: $white;
+  background: $dgreen;
+  border: 0px;
+}
+
+.navbar-item-yellow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+  color: $black;
+  background: $yellow;
+  border: 0px;
+  height: 99px;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 40px;
+  color: $white;
+}
+
+.list-group-horizontal .list-group-item:last-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
