@@ -31,7 +31,7 @@ class BargesController < ApplicationController
   def create
     @barge = Barge.find(barge_params)
     if @barge.save!
-      redirect_to barges_index_path(@barge)
+      redirect_to barges_path(@barge)
     else
       render :new
     end
