@@ -7,5 +7,5 @@ class Barge < ApplicationRecord
   scope :by_product, ->(product) { where("barge_type = ? ", product) }
   scope :by_volume, ->(volume) { where("capacity = ?", volume) }
   scope :by_load_window, ->(load_window) { where("barge_load_window = ?", load_window) }
-  scope :by_barge_area, ->(location) { where("barge_area = ?", location) }
+  # scope :by_location, ->(location) { where("barge_area = ?", location) }
 end
