@@ -6,6 +6,35 @@
 #   movies = Movie.create([{ cargo_name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # puts 'Cleaning database...'
+# require 'open-uri'
+# require 'nokogiri'
+
+# url = "https://www.elwis.de/DE/dynamisch/gewaesserkunde/wasserstaende/index.php?target=1&pegelId=1d26e504-7f9e-480a-b52c-5932be6549ab"
+
+# html_file = open(url).read
+# html_doc = Nokogiri::HTML(html_file)
+
+# sea_level = {}
+
+# html_doc.search('tr td').each_with_index do |element, i|
+#   if i > 41 && i < 68 && (i % 2 == 1)
+#     # puts "#{i} - #{element.text.strip}"
+#     sea_level["#{i}"] = element.text.strip
+#   end
+# end
+
+# puts sea_level
+
+# WaterLevel.new()
+# w = WaterLevel.last
+# w.height = {}
+
+# height[:monday] = 12
+
+
+
+
+
 Barge.destroy_all
 Cargo.destroy_all
 OilCompany.destroy_all
