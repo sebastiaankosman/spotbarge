@@ -1,2 +1,13 @@
-<h1>Barges#index</h1>
-<p>Find me in app/views/barges/index.html.erb</p>
+<h1>Find your barge here</h1>
+<p><%= link_to "Add a barge", new_barge_path %></p>
+
+<ul><% @barges.each do |barge| %>
+  <h3>Barge - <%= barge.barge_name %></h3>
+  <h3>Specifics</h3>
+  <li>Area - <%= barge.barge_area %></li>
+  <li>Gas Free - <%= barge.gas_free %></li>
+  <li>Load Window - <%= barge.barge_load_window %></li>
+  <li>Volume (m³) - <%= barge.capacity %></li>
+  <li>Last 3 Cargo's - <%= barge.pre_cargo %></li>
+  <% end %>
+</ul>
