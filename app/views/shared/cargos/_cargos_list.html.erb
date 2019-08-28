@@ -1,10 +1,14 @@
-<ul><% @cargos.each do |cargo| %>
-  <h3>Cargo - <%= cargo.cargo_name %></h3>
-  <h3>Specifics</h3>
-  <li>Load location - <%= cargo.load_location %></li>
-  <li>Discharge location - <%= cargo.discharge_location %></li>
-  <li>Gas Free - <%= cargo.gas_free %></li>
-  <li>Load Window - <%= cargo.cargo_load_window %></li>
-  <li>Volume (ton) - <%= cargo.volume %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <ul><% @cargos.each do |cargo| %>
+    <div class="result-card">
+      <h3>Cargo - <%= cargo.cargo_name %></h3>
+      <h3>Specifics</h3>
+      <li>Load location - <%= cargo.load_location %></li>
+      <li>Discharge location - <%= cargo.discharge_location %></li>
+      <li>Gas Free - <%= cargo.gas_free %></li>
+      <li>Load Window - <%= cargo.cargo_load_window %></li>
+      <li>Volume (ton) - <%= cargo.volume %></li>
+    </div>
+    <% end %>
+  </ul>
+</div>
