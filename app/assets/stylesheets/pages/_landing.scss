@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+.home-background {
+  height: 100%;
+  background-image: image-url("bargehome.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 75px;
+  z-index: 1;
+}
+
+.home-font {
+  color: $white;
+}
+
+.navbar-home-padding {
+  padding-top: 99px;
+}
