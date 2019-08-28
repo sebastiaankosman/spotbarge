@@ -1,1 +1,28 @@
-_navbar.html.erb
+<% if controller_name == "pages" && action_name="home" %>
+<div class="navbar navbar-home">
+  <div class="navbar-brand">
+    <h1>Spotbarge</h1>
+  </div>
+  <ul class="list-group list-group-horizontal">
+    <% if user_signed_in? %>
+      <li class="list-group-item navbar-item">Dashboard</li>
+      <li class="list-group-item navbar-item">Log out</li>
+    <% else %>
+      <li class="list-group-item navbar-item">Become a member</li>
+      <li class="list-group-item navbar-item">Log in</li>
+    <% end %>
+  </ul>
+</div>
+<% else %>
+<div class="navbar">
+  <div class="navbar-brand">
+    <h1>Spotbarge</h1>
+  </div>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item navbar-item">Dashboard</li>
+    <li class="list-group-item navbar-item">Enter cargo</li>
+    <li class="list-group-item navbar-item">Log out</li>
+    <li class="list-group-item navbar-item-yellow"><i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp Find a barge</li>
+  </ul>
+</div>
+<% end %>

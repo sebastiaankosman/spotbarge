@@ -1,2 +1,16 @@
 // Import page-specific CSS files here.
+body, html {
+  height: 100%;
+  // background-color: white;
+}
+
+@import "adding";
+@import "confirm";
+@import "createaccount";
+@import "dashboard";
 @import "landing";
+@import "login";
+@import "marketplace";
+@import "nominations";
+
+
