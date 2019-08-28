@@ -1,0 +1,10 @@
+<ul><% cargos.each do |cargo| %>
+  <h3>Cargo - <%= cargo.cargo_name %></h3>
+  <li>Load location - <%= cargo.load_location %></li>
+  <li>Discharge location - <%= cargo.discharge_location %></li>
+  <li>Gas Free - <%= cargo.gas_free %></li>
+  <li>Load Window - <%= cargo.cargo_load_window %></li>
+  <li>Volume (ton) - <%= cargo.volume %></li>
+  <li><%= link_to 'Delete', cargo_path(cargo), method: :delete %></li>
+  <% end %>
+</ul>

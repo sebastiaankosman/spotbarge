@@ -5,6 +5,7 @@ class CargosController < ApplicationController
 
   def new
     @cargo = Cargo.new
+    @cargos = Cargo.where oil_company_id: current_user.oil_company.id
   end
 
   def create
@@ -16,6 +17,13 @@ class CargosController < ApplicationController
     end
   end
 
+  def destroy
+    @cargo = Cargo.find(params[:id])
+    @cargo.destroy
+
+    redirect_to new_cargo_path(Cargo.new), notice: "Delete success"
+  end
+
   private
 
   def cargo_params
@@ -24,3 +32,4 @@ class CargosController < ApplicationController
                   :cargo_load_window, :gas_free, :cargo_type)
   end
 end
+
