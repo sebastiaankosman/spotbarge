@@ -3,13 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 94px;
+  height: 70px;
   padding: 0px 50px;
 }
 
 .footer-item {
-  font-size: 20px;
-  color: white;
   background: $lgreen;
   border: 0px;
 }
+
+.footer-item a {
+  font-size: 14px;
+  color: $white;
+  text-decoration: none;
+}
+
+

@@ -1,28 +1,65 @@
-<% if controller_name == "pages" && action_name="home" %>
+<% if controller_name == "pages" && action_name == "home" %>
 <div class="navbar navbar-home">
   <div class="navbar-brand">
-    <h1>Spotbarge</h1>
+    <h1><%= link_to "spotbarge", "/"%></h1>
   </div>
   <ul class="list-group list-group-horizontal">
     <% if user_signed_in? %>
-      <li class="list-group-item navbar-item">Dashboard</li>
-      <li class="list-group-item navbar-item">Log out</li>
+    <li class="list-group-item navbar-item"><%= link_to "Dashboard", "pages/dashboard"%></li>
+    <li class="list-group-item navbar-item"><%= link_to "Log out", "/users/sign_out", method: :delete%></li>
     <% else %>
-      <li class="list-group-item navbar-item">Become a member</li>
-      <li class="list-group-item navbar-item">Log in</li>
+    <li class="list-group-item navbar-item"><%= link_to "Become a member", "/users/sign_up"%></li>
+    <li class="list-group-item navbar-item"><%= link_to "Log in", "/users/sign_in"%></li>
     <% end %>
   </ul>
 </div>
 <% else %>
 <div class="navbar">
   <div class="navbar-brand">
-    <h1>Spotbarge</h1>
+    <h1><%= link_to "spotbarge", "/"%></h1>
   </div>
   <ul class="list-group list-group-horizontal">
-    <li class="list-group-item navbar-item">Dashboard</li>
-    <li class="list-group-item navbar-item">Enter cargo</li>
-    <li class="list-group-item navbar-item">Log out</li>
-    <li class="list-group-item navbar-item-yellow"><i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp Find a barge</li>
+    <% if user_signed_in? %>
+    <% if current_page?(pages_dashboard_path) %>
+    <% else %>
+    <li class="list-group-item navbar-item"><%= link_to "Dashboard", "/pages/dashboard"%></li>
+    <% end %>
+    <% if current_page?(edit_user_registration_path) %>
+    <% else %>
+    <li class="list-group-item navbar-item"><%= link_to "My account", "/users/edit"%></li>
+    <% end %>
+    <% if current_user.type_of_company == "Oilsupplier" %>
+    <% if current_page?(cargos_new_path) || current_page?(barges_index_path) %>
+    <% else %>
+    <li class="list-group-item navbar-item"><%= link_to "Enter cargo", "/cargos/new"%></li>
+    <% end %>
+    <li class="list-group-item navbar-item"><%= link_to "Log out", "/users/sign_out", method: :delete%></li>
+    <% if current_page?(barges_index_path) %>
+    <li class="list-group-item navbar-item-yellow"><i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp <%= link_to "Enter cargo", "/cargos/new"%></li>
+    <% else %>
+    <li class="list-group-item navbar-item-yellow"><i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp <%= link_to "Find a barge", "/barges/index"%></li>
+    <% end %>
+    <% else %>
+    <% if current_page?(barges_new_path) || current_page?(cargos_index_path) %>
+    <% else %>
+    <li class="list-group-item navbar-item"><%= link_to "Enter barge", "/barges/new"%></li>
+    <% end %>
+    <li class="list-group-item navbar-item"><%= link_to "Log out", "/users/sign_out", method: :delete%></li>
+    <% if current_page?(cargos_index_path) %>
+    <li class="list-group-item navbar-item-yellow"><i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp <%= link_to "Enter barge", "/barges/new"%></li>
+    <% else %>
+    <li class="list-group-item navbar-item-yellow"><i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp <%= link_to "Find a cargo", "/cargos/index"%></li>
+    <% end %>
+    <% end %>
+    <% else %>
+    <% if current_page?(new_user_session_path) %>
+    <li class="list-group-item navbar-item-yellow"><i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp <%= link_to "Create account", "/users/sign_up"%></li>
+    <% elsif current_page?(new_user_registration_path) %>
+    <% else %>
+    <li class="list-group-item navbar-item"><%= link_to "Become a member", "/users/sign_up"%></li>
+    <li class="list-group-item navbar-item"><%= link_to "Log in", "/users/sign_in"%></li>
+    <% end %>
+    <% end %>
   </ul>
 </div>
 <% end %>
