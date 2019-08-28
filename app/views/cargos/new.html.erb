@@ -1,2 +1,22 @@
-<h1>Cargos#new</h1>
-<p>Find me in app/views/cargos/new.html.erb</p>
+
+<div>
+  <h1>Enter your cargo here</h1>
+
+  <%= simple_form_for(@cargo) do |f| %>
+    <%= f.input :cargo_name %>
+    <%= f.input :load_location %>
+    <%= f.input :discharge_location %>
+    <%= f.input :cargo_type %>
+    <%= f.input :volume %>
+    <%= f.input :cargo_load_window %>
+    <%= f.input :gas_free %>
+    <%= f.submit %>
+  <% end %>
+
+  <%= render 'shared/cargos/filtered_cargos_list', cargos: @cargos %>
+
+  <div class="notice">Delete success</div>
+
+</div>
+
+

@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :oil_companies
-  has_many :brokers
+  has_one :oil_company
+  has_one :broker
 end
