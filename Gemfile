@@ -15,6 +15,9 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+gem "chartkick"
+gem 'groupdate'
+
 
 
 group :development do
