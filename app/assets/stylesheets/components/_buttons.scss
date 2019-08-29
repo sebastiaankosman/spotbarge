@@ -10,7 +10,12 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   width: 234px;
-  height: 71px;
+  height: 50px;
+}
+
+.btn-back-login a {
+  color: #4A4A4A;
+  text-decoration: none;
 }
 
 .btn-back-login:hover {
@@ -19,6 +24,7 @@
 
 .btn-forward-login {
   color: #4A4A4A;
+  font-family: roboto;
   font-size: 20px;
   background-color: #F7DB64;
   padding: 8px 24px;
@@ -29,7 +35,7 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   width: 234px;
-  height: 71px;
+  height: 50px;
 }
 
 .btn-forward-login:hover {
@@ -47,10 +53,15 @@
   justify-content: center;
   opacity: 1;
   transition: opacity 0.3s ease;
-  width: 250px;
-  height: 69px;
+  width: 182px;
+  height: 50px;
 }
 
 .btn-home:hover {
   opacity: 0.6;
+}
+
+.bl {
+  font-family: $body-font;
+  font-size: 20px;
 }
