@@ -1,0 +1,27 @@
+.form-fonts {
+  font-family: $body-font;
+}
+
+.form-l {
+  min-width: 50%;
+}
+
+.form-body {
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-title {
+  margin-bottom: 2rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+
