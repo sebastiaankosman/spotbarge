@@ -1,4 +1,7 @@
 import "bootstrap";
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();
+
 require("chartkick")
 require("chart.js")
 
