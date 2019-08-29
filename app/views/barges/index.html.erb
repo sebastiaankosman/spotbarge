@@ -19,6 +19,6 @@
   <li>Load Window - <%= barge.barge_load_window %></li>
   <li>Volume (m³) - <%= barge.capacity %></li>
   <li>Last 3 Cargo's - <%= barge.pre_cargo %></li>
-  <h4><%= link_to('Book Now', barge_booking_path(@barge, @booking)) %></h4>
+  <%= link_to('Book Now', barge_booking_path(@barge, @booking)) %>
   <% end %>
 </ul>
