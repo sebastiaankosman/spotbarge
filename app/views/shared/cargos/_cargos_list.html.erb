@@ -39,9 +39,12 @@
 
 
       <div class="middle-row">
-        <% @cargos.each do |cargo| %>
-        <div class="result-card">
-
+        <% @cargos.each_with_index do |cargo, i| %>
+          <% if i%2 == 0 %>
+            <div class="result-card-white">
+          <% else %>
+            <div class="result-card">
+          <% end %>
           <div class="cargo-name-card">
             <h3>Cargo</h3>
             <h4><%= cargo.cargo_name %></h4>
@@ -49,28 +52,40 @@
 
 
           <div class="cargo-specifics">
-            <h3>Specifics</h3>
-            <ul>
-              <li>Load location - <%= cargo.load_location %></li>
-              <li>Discharge location - <%= cargo.discharge_location %></li>
-              <li>Gas Free - <%= cargo.gas_free %></li>
-              <li>Load Window - <%= cargo.cargo_load_window %></li>
-              <li>Volume (ton) - <%= cargo.volume %></li>
+
+          <div class="specifics-details">
+          <h3>Specifics</h3>
+          <div>Load location</div>
+          <div>Discharge location</div>
+          <div>Gasfree required</div>
+          <div>Load Window </div>
+          <div>Volume (ton) </div>
+          </div>
+
+            <ul class="list-unstyled">
+              <li><%= cargo.load_location %></li>
+              <li><%= cargo.discharge_location %></li>
+              <li><%= cargo.gas_free ? 'Yes' : 'No' %></li>
+              <li><%= cargo.cargo_load_window %></li>
+              <li><%= cargo.volume %></li>
             </ul>
           </div>
+
+
+
 
 
           <div class= "cargo-contact-card">
             <h3>Contact</h3>
             <div class="contact-buttons-card">
-              <a class="far fa-comments" href="#"></a>
-              <a class="fas fa-phone-volume" href="#"></a>
-              <a class="far fa-envelope" href="#"></a>
+              <a class="far fa-comments fa-lg" href="#"></a>
+              <a class="fas fa-phone-volume fa-lg" href="#"></a>
+              <a class="far fa-envelope fa-lg" href="#"></a>
+              </div>
               <div class="book-button">
-                <p><%= link_to "Book cargo"%></p>
+                <div class="btn-home"><%= link_to "Book cargo"%></div>
               </div>
             </div>
-          </div>
         </div>
         <% end %>
       </div>
