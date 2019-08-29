@@ -1,1 +1,27 @@
 // File for the login page
+.container-login {
+  display: flex;
+  height: calc(100vh - 140px);
+  align-items: center;
+}
+
+.login-background {
+  position: absolute;
+  right: 0;
+  background-size: 100%;
+  background: url("barge2.png");
+  background-position: bottom;
+  min-width: 675px;
+  min-width: 50%;
+  height: calc(100vh - 140px);
+  z-index: -1;
+}
+
+.form-login-w {
+  min-width: 50%;
+}
+
+.form-margins {
+  margin-right: 100px;
+  margin-left: 100px;
+}
