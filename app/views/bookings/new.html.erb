@@ -1,6 +1,6 @@
 <h1>Confirm barge</h1>
 
-<%= simple_form_for @booking do |f| %>
+<%= simple_form_for [@barge, @booking] do |f| %>
   <%= f.input :freight_rate %>
   <%= f.input :free_hours %>
   <%= f.input :demurrage_rate %>
