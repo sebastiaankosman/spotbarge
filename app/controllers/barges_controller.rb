@@ -1,28 +1,35 @@
 class BargesController < ApplicationController
   def index
     @barges = Barge.all
-
-    if params[:barge_area]
-      barges_by_area = []
-      params[:barge_area].each do |area|
-        barges_by_area += @barges.by_area(area)
+    # [ARA, Rhine]
+    # barge_area=ARA,Rhine&capacity=skdhfds
+    if params[:barge_areas]
+      barge_areas_params = params[:barge_areas][1..]
+      if barge_areas_params.length.positive?
+        barge_areas_params.each do |area|
+          @barges = @barges.by_area(area)
+        end
       end
-      @barges = barges_by_area
     end
 
-    if params[:barge_type]
-      barges_by_type = []
-      params[:barge_type].each do |type|
-        barges_by_type += @barges.by_product(type)
+    if params[:barge_types]
+      barge_types_params = params[:barge_types][1..]
+      if barge_types_params.length.positive?
+        barge_types_params.each do |type|
+          @barges = @barges.by_product(type)
+        end
       end
-      @barges = barges_by_type
     end
-
-    @barges = @barges.by_volume(params[:capacity]) if params[:capacity]
-    @barges = @barges.by_load_window(params[:barge_load_window]) if params[:barge_load_window]
-    @barges = @barges.by_barge_area(params[:barge_area]) if params[:barge_area]
+    @barges = @barges.by_volume(VOLUMES[params[:capacity].to_sym]) if params[:capacity] && params[:capacity].length.positive?
+    @barges = @barges.by_load_window(Date.parse(params[:barge_load_window])) if params[:barge_load_window] && params[:barge_load_window].length.positive?
+    # @barges = @barges.by_barge_area(params[:barge_area]) if params[:barge_area]
     @barges
   end
+
+  # def filter
+    # POST /barges/filter
+
+  # end
 
   def new
     @barge = Barge.new

@@ -1,7 +1,16 @@
-<h1>Find your barge here</h1>
-
 <p><%= link_to "Add a barge", new_barge_path %></p>
 
+<h2>Find your barge here</h2>
+<%= simple_form_for '', method: :get do |f| %>
+<%= f.input :barge_areas, as: :check_boxes, collection: [['ARA', 'ARA'], ['Rhine',
+  'Rhine'], ['Middle-Rhine', 'Middle-Rhine'], ['Upper-Rhine', 'Upper-Rhine']] %>
+<%= f.input :barge_types, as: :check_boxes, collection: [['CPP', 'CPP'], ['Fuel', 'Fuel'],
+['Chemicals', 'Chemicals'], ['Bunker', 'Bunker']] %>
+<%= f.input :capacity, collection: [['< 1500', 0], ['1500 - 2500', 1],
+['2500 - 4000', 2], ['4000 +', 3]] %>
+<%= f.date_field :barge_load_window  %>
+<%= f.submit 'Search' %>
+<% end %>
 <ul><% @barges.each do |barge| %>
   <h3>Barge - <%= barge.barge_name %></h3>
   <h3>Specifics</h3>
@@ -10,5 +19,6 @@
   <li>Load Window - <%= barge.barge_load_window %></li>
   <li>Volume (m³) - <%= barge.capacity %></li>
   <li>Last 3 Cargo's - <%= barge.pre_cargo %></li>
+  <h4><%= link_to('Book Now', barge_booking_path(@barge, @booking)) %></h4>
   <% end %>
 </ul>
