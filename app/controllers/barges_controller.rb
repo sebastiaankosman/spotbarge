@@ -20,9 +20,8 @@ class BargesController < ApplicationController
         end
       end
     end
-
-    @barges = @barges.by_volume(params[:capacity].to_i) if params[:capacity]
-    @barges = @barges.by_load_window(Date.parse(params[:barge_load_window])) if params[:barge_load_window]
+    @barges = @barges.by_volume(VOLUMES[params[:capacity].to_sym]) if params[:capacity] && params[:capacity].length.positive?
+    @barges = @barges.by_load_window(Date.parse(params[:barge_load_window])) if params[:barge_load_window] && params[:barge_load_window].length.positive?
     # @barges = @barges.by_barge_area(params[:barge_area]) if params[:barge_area]
     @barges
   end
