@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $llblue;
+  height: 200px;
+  width: 100%;
+}
+
+.cargo-name-card {
+  width: 33%;
+  margin-left: 2%;
+}
+
+.cargo-specifics {
+  width: 38%;
+}
+
+.cargo-contact-card {
+  width: 25%;
+}
+
+.cargo-contact-card a {
+  text-decoration: none;
+  color: $black;
+}
+
+
+.cargo-button-card {
+  display: flex;
+  flex-direction: row;
+}
+

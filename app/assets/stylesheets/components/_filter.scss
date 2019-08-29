@@ -1,0 +1,32 @@
+.filter-result-card {
+display: flex;
+background-color: $ldblue;
+height: 400px;
+justify-content: space-between;
+}
+
+.filter-box-card {
+  height: 221px;
+  width: 160px;
+
+}
+
+.white-filter-box {
+background-color: $white;
+height: 221px;
+width: 160px;
+color: $mgreen;
+}
+
+.green-filter-box {
+background-color: $mgreen;
+height: 42px;
+width: 160px;
+color: $white;
+padding: 10px;
+text-align: center;
+}
+
+.top-row {
+  background-color: $ldblue;
+}

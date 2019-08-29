@@ -1,14 +1,77 @@
 <div class="container">
-  <ul><% @cargos.each do |cargo| %>
-    <div class="result-card">
-      <h3>Cargo - <%= cargo.cargo_name %></h3>
-      <h3>Specifics</h3>
-      <li>Load location - <%= cargo.load_location %></li>
-      <li>Discharge location - <%= cargo.discharge_location %></li>
-      <li>Gas Free - <%= cargo.gas_free %></li>
-      <li>Load Window - <%= cargo.cargo_load_window %></li>
-      <li>Volume (ton) - <%= cargo.volume %></li>
+  <div class="top-row">
+    <h1>Find your cargo here</h1>
+    <div class="filter-result-card">
+      <div class="filter-box-card">
+        <div class="green-filter-box">
+          Area
+        </div>
+        <div class="white-filter-box">
+          <div>test</div>
+          <div>test</div>
+          <div>test</div>
+          <div>test</div>
+        </div>
+      </div>
+      <div class="filter-box-card">
+        <div class="green-filter-box">
+          Cargo
+        </div>
+        <div class="white-filter-box">
+          <div>test</div>
+          <div>test</div>
+          <div>test</div>
+          <div>test</div>
+        </div>
+      </div>
+      <div class="filter-box-card">
+        <div class="green-filter-box">
+          Volume in tons
+        </div>
+      </div>
+      <div class="filter-box-card">
+        <div class="green-filter-box">
+          Volume in tons
+        </div>
+      </div>
     </div>
-    <% end %>
-  </ul>
-</div>
+
+
+
+      <div class="middle-row">
+        <% @cargos.each do |cargo| %>
+        <div class="result-card">
+
+          <div class="cargo-name-card">
+            <h3>Cargo</h3>
+            <h4><%= cargo.cargo_name %></h4>
+          </div>
+
+
+          <div class="cargo-specifics">
+            <h3>Specifics</h3>
+            <ul>
+              <li>Load location - <%= cargo.load_location %></li>
+              <li>Discharge location - <%= cargo.discharge_location %></li>
+              <li>Gas Free - <%= cargo.gas_free %></li>
+              <li>Load Window - <%= cargo.cargo_load_window %></li>
+              <li>Volume (ton) - <%= cargo.volume %></li>
+            </ul>
+          </div>
+
+
+          <div class= "cargo-contact-card">
+            <h3>Contact</h3>
+            <div class="contact-buttons-card">
+              <a class="far fa-comments" href="#"></a>
+              <a class="fas fa-phone-volume" href="#"></a>
+              <a class="far fa-envelope" href="#"></a>
+              <div class="book-button">
+                <p><%= link_to "Book cargo"%></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
