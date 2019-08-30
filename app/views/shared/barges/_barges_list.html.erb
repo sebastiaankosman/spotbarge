@@ -38,6 +38,17 @@
       <div class="search-button"><%= f.submit 'Search', :class => 'btn-home' %></div>
     <% end %>
   </div>
+
+  <div class="map-box">
+    <div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+  </div>
   <div class="middle-row">
     <% @barges.each_with_index do |barge, i| %>
      <% if i%2 == 0 %>
