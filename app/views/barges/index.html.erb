@@ -2,8 +2,7 @@
 
 <h2>Find your barge here</h2>
 <%= simple_form_for '', method: :get do |f| %>
-<%= f.input :barge_areas, as: :check_boxes, collection: [['ARA', 'ARA'], ['Rhine',
-  'Rhine'], ['Middle-Rhine', 'Middle-Rhine'], ['Upper-Rhine', 'Upper-Rhine']] %>
+<%= f.input :barge_areas, as: :check_boxes, collection: [['ARA', 'ARA'], ['Middle-Rhine', 'Middle-Rhine'], ['Upper-Rhine', 'Upper-Rhine'], ['Northern Carnals', 'Northern Carnals'], ] %>
 <%= f.input :barge_types, as: :check_boxes, collection: [['CPP', 'CPP'], ['Fuel', 'Fuel'],
 ['Chemicals', 'Chemicals'], ['Bunker', 'Bunker']] %>
 <%= f.input :capacity, collection: [['< 1500', 0], ['1500 - 2500', 1],
