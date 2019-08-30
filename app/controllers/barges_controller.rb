@@ -29,6 +29,14 @@ class BargesController < ApplicationController
   # def filter
     # POST /barges/filter
 
+    @barges = Barge.geocoded #returns flats with coordinates
+
+    @markers = @barges.map do |barge|
+      {
+        lat: barge.latitude,
+        lng: barge.longitude
+      }
+
   # end
 
   def new
