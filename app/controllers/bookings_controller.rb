@@ -1,12 +1,13 @@
 class BookingsController < ApplicationController
 
   def new
+    @barge = Barge.find(params[:barge_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @barge = Barge.find(params[:id])
+    @barge = Barge.find(params[:barge_id])
     if @booking.save!
       redirect_to barge_booking_path(@barge, @booking)
     else
@@ -25,4 +26,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:freight_rate, :free_hours, :demurrage_rate, :short_notice, :comment)
   end
+
 end
