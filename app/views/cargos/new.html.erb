@@ -4,11 +4,14 @@
 
   <%= simple_form_for(@cargo) do |f| %>
     <%= f.input :cargo_name %>
+    <%= f.input :volume %>
     <%= f.input :load_location %>
     <%= f.input :discharge_location %>
-    <%= f.input :cargo_type %>
-    <%= f.input :volume %>
-    <%= f.input :cargo_load_window %>
+    <div class="date-field">
+      <%= f.label :date %>
+      <%= f.date_field :cargo_load_window %>
+    </div>
+    <%= f.input :cargo_type, as: :check_boxes, collection: @cargo_type %>
     <%= f.input :gas_free %>
     <%= f.submit %>
   <% end %>
