@@ -12,17 +12,37 @@
   width: 100%;
 }
 
+.result-card-white {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $white;
+  height: 200px;
+  width: 100%;
+}
+
 .cargo-name-card {
   width: 33%;
   margin-left: 2%;
+  padding-top: 20px;
 }
 
 .cargo-specifics {
-  width: 38%;
+  width: 45%;
+  padding-top: 20px;
+  display:flex;
+  justify-content: space-between;padding-right: 200px;
+}
+
+.list-unstyled{
+  padding-top: 40px;
 }
 
 .cargo-contact-card {
   width: 25%;
+  padding-top: 20px;
+  // display: flex;
+  // flex-direction: row;
 }
 
 .cargo-contact-card a {
@@ -30,9 +50,21 @@
   color: $black;
 }
 
-
-.cargo-button-card {
+.contact-buttons-card {
   display: flex;
   flex-direction: row;
+  justify-content: space-between; padding-right: 150px; padding-left: 0px;
+  padding-top: 15px;
 }
+
+.book-button {
+  padding-top: 25px;
+}
+
+.cargo-text {
+  color: $mgreen;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 
