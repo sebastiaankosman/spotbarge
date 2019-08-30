@@ -1,55 +1,18 @@
-<div class="container">
-  <div class="top-row">
-    <div class="cargo-text">
-      <h1>Find your cargo here</h1>
-    </div>
-    <div class="filter-result-card">
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Area
-        </div>
-        <div class="white-filter-box">
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-        </div>
-      </div>
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Cargo
-        </div>
-        <div class="white-filter-box">
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-        </div>
-      </div>
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Volume in tons
-        </div>
-      </div>
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Load date
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="middle-row">
-    <% @cargos.each_with_index do |cargo, i| %>
-      <% if i%2 == 0 %>
-        <div class="result-card-white">
-      <% else %>
-        <div class="result-card">
+<div class="middle-row">
+  <% @cargos.each_with_index do |cargo, i| %>
+  <% if i%2 == 0 %>
+  <div class="result-card-white">
+    <% else %>
+    <div class="result-card">
       <% end %>
       <div class="cargo-name-card">
         <h3>Cargo</h3>
         <h4><%= cargo.cargo_name %></h4>
       </div>
+
+
       <div class="cargo-specifics">
+
         <div class="specifics-details">
           <h3>Specifics</h3>
           <div>Load location</div>
@@ -67,6 +30,7 @@
           <li><%= cargo.volume %></li>
         </ul>
       </div>
+
       <div class= "cargo-contact-card">
         <h3>Contact</h3>
         <div class="contact-buttons-card">
@@ -75,7 +39,7 @@
           <a class="far fa-envelope fa-lg" href="#"></a>
         </div>
         <div class="book-button">
-          <div class="btn-home"><%= link_to "Book cargo"%></div>
+          <div class="btn-home"><%= link_to "Book cargo", new_cargo_path(@cargo) %></div>
         </div>
       </div>
     </div>

@@ -22,6 +22,24 @@ const initMapbox = () => {
     markers.forEach((marker) => {
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
+        .addLayer({
+          id: 'historical-places',
+          type: 'circle',
+          source: {
+            type: 'vector',
+            url: 'mapbox://styles/mapbox/streets-v1'
+          },
+          'source-layer': 'your-source-layer-here',
+          paint: {
+            'circle-radius': [
+              '/',
+              ['-', 2017, ['number', ['get', 'Constructi'], 2017]],
+              10
+            ],
+            'circle-opacity': 0.8,
+            'circle-color': 'rgb(171, 72, 33)'
+          }
+        })
         .addTo(map);
     });
     fitMapToMarkers(map, markers);
