@@ -1,16 +1,18 @@
-<div class="container">
-  <div class="middle-row">
-    <% @cargos.each_with_index do |cargo, i| %>
-      <% if i%2 == 0 %>
-        <div class="result-card-white">
-      <% else %>
-        <div class="result-card">
+<div class="middle-row">
+  <% @cargos.each_with_index do |cargo, i| %>
+  <% if i%2 == 0 %>
+  <div class="result-card-white">
+    <% else %>
+    <div class="result-card">
       <% end %>
       <div class="cargo-name-card">
         <h3>Cargo</h3>
         <h4><%= cargo.cargo_name %></h4>
       </div>
+
+
       <div class="cargo-specifics">
+
         <div class="specifics-details">
           <h3>Specifics</h3>
           <div>Load location</div>
@@ -19,6 +21,7 @@
           <div>Load date </div>
           <div>Volume (ton) </div>
         </div>
+
         <ul class="list-unstyled">
           <li><%= cargo.load_location %></li>
           <li><%= cargo.discharge_location %></li>
@@ -27,6 +30,7 @@
           <li><%= cargo.volume %></li>
         </ul>
       </div>
+
       <div class= "cargo-contact-card">
         <h3>Contact</h3>
         <div class="contact-buttons-card">
