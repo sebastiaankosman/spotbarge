@@ -24,10 +24,27 @@ class BargesController < ApplicationController
     @barges = @barges.by_load_window(Date.parse(params[:barge_load_window])) if params[:barge_load_window] && params[:barge_load_window].length.positive?
     # @barges = @barges.by_barge_area(params[:barge_area]) if params[:barge_area]
     @barges
+
+    @barges_with_coordinates = Barge.geocoded #returns flats with coordinates
+
+    @markers = @barges_with_coordinates.map do |barge|
+      {
+        lat: barge.latitude,
+        lng: barge.longitude
+      }
+    end
   end
 
   # def filter
     # POST /barges/filter
+
+    @barges = Barge.geocoded #returns flats with coordinates
+
+    @markers = @barges.map do |barge|
+      {
+        lat: barge.latitude,
+        lng: barge.longitude
+      }
 
   # end
 
@@ -52,4 +69,5 @@ class BargesController < ApplicationController
           .permit(:barge_name, :capacity, :barge_area,
                   :barge_load_window, :gas_free, :pre_cargo, :barge_type)
   end
+end
 end
