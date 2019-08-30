@@ -34,8 +34,8 @@
 
 
 
-Broker.destroy_all
 Barge.destroy_all
+Broker.destroy_all
 Cargo.destroy_all
 OilCompany.destroy_all
 User.destroy_all
