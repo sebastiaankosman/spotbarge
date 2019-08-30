@@ -9,10 +9,11 @@
   z-index: 1;
 }
 
-.home-background img {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+.home-background {
+  height: 100%;
+  background-color: $white;
 }
+
 
 
 .home-font {
@@ -37,21 +38,9 @@
   font-weight: bold;
 }
 
-.btn-home i.fas.fa-arrow-right {
-  margin-right: 10px;
-  text-decoration: none;
-}
-
 .banner p {
   font-size: 20px;
   color: $white;
   // opacity: .7;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.home-buttons {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  height: 100%;
 }
