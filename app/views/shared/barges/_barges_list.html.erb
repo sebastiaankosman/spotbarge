@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container"> -->
   <div class="top-row">
     <div class="cargo-text">
       <h1>Find your barge here</h1>
@@ -43,7 +43,7 @@
     <div
   id="map"
   style="width: 100%;
-  height: 600px;"
+  height: 350px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
@@ -59,6 +59,7 @@
         <div class="cargo-name-card">
           <h3>Barge</h3>
           <h4><%= barge.barge_name %></h4>
+          <a class="fas fa-ship fa-lg"></a>
         </div>
         <div class="cargo-specifics">
           <div class="specifics-details">

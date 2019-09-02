@@ -29,8 +29,8 @@ class CargosController < ApplicationController
   def new
     @cargo = Cargo.new
     @cargos = Cargo.where(oil_company_id: current_user.oil_company.id)
-    load_location
-    cargo_type
+    # load_location
+    # cargo_type
   end
 
   def create
