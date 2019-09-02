@@ -1,7 +1,6 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
 import "bootstrap";
 import { initMapbox } from 'plugins/init_mapbox';
-// initMapbox();
 
 
 require("chartkick")
@@ -122,6 +121,9 @@ if (chartThreeElement) {
   chart3.render();
 }
 
+if (document.querySelectorAll('legend')) {
+  document.querySelectorAll('legend').forEach((l) => {l.style.display = 'none'})
+}
 
 
 

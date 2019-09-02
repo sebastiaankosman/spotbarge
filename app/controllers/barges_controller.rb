@@ -58,4 +58,3 @@ class BargesController < ApplicationController
                   :barge_load_window, :gas_free, :pre_cargo, :barge_type)
   end
 end
-end

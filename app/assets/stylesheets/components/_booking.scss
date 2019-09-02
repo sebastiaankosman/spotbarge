@@ -2,3 +2,68 @@
 background-color: $ldblue;
 
 }
+
+.booking-form {
+  height: 700px;
+  width: 300px;
+}
+
+.booking-text {
+  color: $mgreen;
+}
+
+.booking-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-specifics {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 100%;
+}
+
+.booking-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.bookings-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.cargo-booking-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.cargo-booking-load-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.cargo-booking-volume {
+  display: flex;
+  flex-direction: column;
+}
+
+.cargo-booking-load-location {
+  display: flex;
+  flex-direction: column;
+}
+
+.cargo-booking-discharge-location {
+  display: flex;
+  flex-direction: column;
+}
+
+.cargo-booking-delete {
+  display: flex;
+  flex-direction: column;
+}

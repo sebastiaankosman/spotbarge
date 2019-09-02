@@ -1,15 +1,44 @@
-<ul><% cargos.each do |cargo| %>
-  <h3>Cargo - <%= cargo.cargo_name %></h3>
-  <li>Load location - <%= cargo.load_location %></li>
-  <li>Discharge location - <%= cargo.discharge_location %></li>
-  <li>Gas Free - <%= cargo.gas_free %></li>
-  <li>Load Window - <%= cargo.cargo_load_window %></li>
-  <li>Volume (ton) - <%= cargo.volume %></li>
-  <li><%= link_to 'Delete', cargo_path(cargo), method: :delete %></li>
-  <% end %>
-</ul>
+  <div class="booking-card">
+    <ul>
+      <% cargos.each do |cargo| %>
+        <div class="booking-specifics">
+          <div class="bookings-details">
 
-<div>
-  <h1>Enter your cargo here</h1>
+            <div class="cargo-booking-name">
+            <h4>Cargo</h4>
+            <div><%= cargo.cargo_name %></div>
+            </div>
+
+            <div class="cargo-booking-load-date">
+            <h4>Load date</h4>
+            <div><%= cargo.cargo_load_window %></div>
+            </div>
+
+            <div class="cargo-booking-volume">
+            <h4>Volume (ton)</h4>
+            <div><%= cargo.volume %></div>
+            </div>
+
+            <div class="cargo-booking-load-location">
+            <h4>Load location</h4>
+            <div><%= cargo.load_location %></div>
+            </div>
+
+            <div class="cargo-booking-discharge-location">
+            <h4>Discharge location</h4>
+            <div><%= cargo.discharge_location %></div>
+            </div>
+
+            <div class="cargo-booking-delete">
+            <div>""</div>
+            <div><%= link_to 'Delete', cargo_path(cargo), method: :delete %>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  </ul>
+</div>
 
 

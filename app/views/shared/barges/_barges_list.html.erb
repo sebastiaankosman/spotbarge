@@ -1,54 +1,3 @@
-<!-- <div class="container"> -->
-  <div class="top-row">
-    <div class="cargo-text">
-      <h1>Find your barge here</h1>
-    </div>
-    <%= simple_form_for '', method: :get do |f| %>
-      <div class="filter-result-card">
-        <div class="filter-box-card">
-          <div class="green-filter-box">
-            Area
-          </div>
-          <div class="white-filter-box">
-            <%= f.input :barge_areas, as: :check_boxes, collection: [['ARA', 'ARA'], ['Rhine',
-              'Rhine'], ['Middle-Rhine', 'Middle-Rhine'], ['Upper-Rhine', 'Upper-Rhine']] %>
-          </div>
-        </div>
-        <div class="filter-box-card">
-          <div class="green-filter-box">
-            Cargo
-          </div>
-          <div class="white-filter-box">
-            <%= f.input :barge_types, as: :check_boxes, collection: [['CPP', 'CPP'], ['Fuel', 'Fuel'],
-              ['Chemicals', 'Chemicals'], ['Bunker', 'Bunker']] %>
-          </div>
-        </div>
-        <div class="filter-box-card">
-          <div class="green-filter-box">
-            <%= f.input :capacity, collection: [['< 1500', 0], ['1500 - 2500', 1],
-              ['2500 - 4000', 2], ['4000 +', 3]] %>
-          </div>
-        </div>
-        <div class="filter-box-card">
-          <div class="green-filter-box">
-            <%= f.date_field :barge_load_window  %>
-          </div>
-        </div>
-      </div>
-      <div class="search-button"><%= f.submit 'Search', :class => 'btn-home' %></div>
-    <% end %>
-  </div>
-
-  <div class="map-box">
-    <div
-  id="map"
-  style="width: 100%;
-  height: 350px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
-
-  </div>
   <div class="middle-row">
     <% @barges.each_with_index do |barge, i| %>
      <% if i%2 == 0 %>
@@ -70,7 +19,7 @@
             <div>Load date </div>
             <div>Volume (m³) </div>
           </div>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled results-specifics">
             <li><%= barge.barge_area %></li>
             <li><%= barge.pre_cargo %></li>
             <li><%= barge.gas_free ? 'Yes' : 'No' %></li>
@@ -78,6 +27,7 @@
             <li><%= barge.capacity %></li>
           </ul>
         </div>
+
         <div class= "cargo-contact-card">
           <h3>Contact</h3>
           <div class="contact-buttons-card">

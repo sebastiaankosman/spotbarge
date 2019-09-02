@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Spotbarge
   class Application < Rails::Application
+    config.action_controller.perform_caching = false
     config.generators do |generate|
           generate.assets false
           generate.helper false
