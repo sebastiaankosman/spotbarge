@@ -1,3 +1,4 @@
+
 <div class="middle-row">
   <% @cargos.each_with_index do |cargo, i| %>
   <% if i%2 == 0 %>
@@ -8,6 +9,7 @@
       <div class="cargo-name-card">
         <h3>Cargo</h3>
         <h4><%= cargo.cargo_name %></h4>
+        <a class="fas fa-tint fa-lg"></a>
       </div>
 
 
@@ -46,3 +48,5 @@
     <% end %>
   </div>
 </div>
+
+

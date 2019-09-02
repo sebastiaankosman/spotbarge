@@ -1,18 +1,17 @@
+import 'mapbox-gl/dist/mapbox-gl.css';
 import "bootstrap";
-import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
+import { initMapbox } from 'plugins/init_mapbox';
+// initMapbox();
 
-import { initMapbox } from '../plugins/init_mapbox';
-
-initMapbox();
-
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-initUpdateNavbarOnScroll();
 
 require("chartkick")
 require("chart.js")
 
-  var ctx = document.getElementById('chart1').getContext('2d');
-  var chart1 = new Chart(ctx, {
+const chartOneElement = document.getElementById('chart1')
+
+if (chartOneElement) {
+  const ctx = document.getElementById('chart1').getContext('2d');
+  const chart1 = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
 
@@ -31,7 +30,7 @@ require("chart.js")
     options: {
     legend: {
             display: true,
-            position: 'bottom',
+            position: 'top',
             labels: {
                 fontColor: 'rgba(78, 132, 131, 1)'
             }
@@ -40,9 +39,14 @@ require("chart.js")
     }
   });
 
+  chart1.render();
+}
+const chartTwoElement = document.getElementById('chart2')
 
-var ctx = document.getElementById('chart2').getContext('2d');
-var chart2 = new Chart(ctx, {
+
+if (chartTwoElement) {
+const ctx = document.getElementById('chart2').getContext('2d');
+const chart2 = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Adam - Rdam', 'Adam - Antw', 'Adam - Adam', 'Rdam - Antw', 'Rdam - Flush', 'Antw - Flush'],
@@ -78,12 +82,16 @@ var chart2 = new Chart(ctx, {
                 //     barPercentage: 0.7
                 // }]
             }]
-        }
+      }
     }
 });
+chart2.render();
+}
 
-  var ctx = document.getElementById('chart3').getContext('2d');
-  var chart3 = new Chart(ctx, {
+const chartThreeElement = document.getElementById('chart3')
+if (chartThreeElement) {
+  const ctx = document.getElementById('chart3').getContext('2d');
+  const chart3 = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
 
@@ -103,7 +111,7 @@ var chart2 = new Chart(ctx, {
     options: {
          legend: {
             display: true,
-            position: 'bottom',
+            position: 'top',
             labels: {
                 fontColor: 'rgba(78, 132, 131, 1)',
                 fill: false
@@ -111,9 +119,11 @@ var chart2 = new Chart(ctx, {
         }
     }
   });
+  chart3.render();
+}
 
 
 
-chart1.render();
-chart2.render();
-chart3.render();
+
+// import { initMapbox } from 'plugins/init_mapbox';
+initMapbox();
