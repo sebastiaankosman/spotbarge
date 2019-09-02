@@ -55,7 +55,7 @@ users_attributes = [
     country: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
-    notification_sms: 'no'
+    notification_sms: 'no',
   },
   {
     first_name: 'Onne',
@@ -192,10 +192,12 @@ companies = ['Shell', 'Petrobras', 'BP', 'Vitol', 'Glencore']
 
 oil_users.each do |oil_user|
   OilCompany.create!(name: oil_user.company_name, user: oil_user)
+  oil_user.oil_company = OilCompany.last
 end
 
 brokers.each do |broker|
   Broker.create!(name: broker.company_name, user: broker)
+  broker.broker = Broker.last
 end
 
 barge_attributes = [

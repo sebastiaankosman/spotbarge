@@ -6,4 +6,12 @@ class User < ApplicationRecord
 
   has_one :oil_company
   has_one :broker
+
+  def broker?
+    !!self.broker
+  end
+
+  def oil_company?
+    !!self.oil_company
+  end
 end

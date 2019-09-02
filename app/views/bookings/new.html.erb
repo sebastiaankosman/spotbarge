@@ -1,10 +1,22 @@
-<h1>Confirm barge</h1>
-
-<%= simple_form_for [@barge, @booking] do |f| %>
-  <%= f.input :freight_rate %>
-  <%= f.input :free_hours %>
-  <%= f.input :demurrage_rate %>
-  <%= f.input :short_notice %>
-  <%= f.input :comment %>
-  <%= f.submit :create %>
+<% if @user.oil_company? %>
+  <h2>Confirm barge</h2>
+  <%= simple_form_for [@barge, @booking] do |f| %>
+    <%= f.input :booker_cargo_id, collection:  %>
+    <%= f.input :freight_rate %>
+    <%= f.input :free_hours %>
+    <%= f.input :demurrage_rate %>
+    <%= f.input :short_notice %>
+    <%= f.input :comment %>
+    <%= f.submit :create %>
+  <% end %>
+<% elsif @user.broker? %>
+  <h2>Confirm cargo</h2>
+    <%= simple_form_for [@cargo, @booking] do |f| %>
+      <%= f.input :freight_rate %>
+      <%= f.input :free_hours %>
+      <%= f.input :demurrage_rate %>
+      <%= f.input :short_notice %>
+      <%= f.input :comment %>
+      <%= f.submit :create %>
+    <% end %>
 <% end %>
