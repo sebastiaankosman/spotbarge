@@ -10,11 +10,17 @@
     <%= f.input :load_location %>
     <%= f.input :discharge_location %>
     <div class="date-field">
-      <%= f.label :date %>
+      <%= f.label :load_date %>
       <%= f.date_field :cargo_load_window %>
     </div>
+    <div class="cargo-type">
+    <%= f.label :cargo_type %>
     <%= f.input :cargo_type, as: :check_boxes, collection: @cargo_type %>
+    </div>
+    <div class="gas-free">
+    <%= f.label :gas_free %>
     <%= f.input :gas_free %>
+    </div>
     <%= f.submit %>
     <% end %>
   </div>
