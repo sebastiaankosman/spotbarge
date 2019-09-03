@@ -30,9 +30,11 @@
             </div>
 
             <div class="booking-delete">
-            <div>""</div>
-            <div><%= link_to 'Delete', barge_path(barge), method: :delete %>
-          </div>
+            <div>
+            <%= link_to(barge_path(barge), method: :delete) do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+           </div>
           </div>
 
         </div>
