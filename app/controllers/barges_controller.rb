@@ -38,6 +38,8 @@ class BargesController < ApplicationController
 
   def new
     @barge = Barge.new
+    @barges = Barge.where(broker_id: current_user.broker.id)
+
   end
 
   def create
@@ -48,6 +50,7 @@ class BargesController < ApplicationController
       render :new
     end
   end
+
 
   private
 
