@@ -25,6 +25,7 @@ const initMapbox = () => {
 
   if (mapElement) {
 
+
     //marker on map
 
   }

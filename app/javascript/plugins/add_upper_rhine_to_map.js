@@ -2,15 +2,15 @@ import mapboxgl from 'mapbox-gl';
 import { map } from '../plugins/init_mapbox';
 
 
-const addNorthgermanyToMap = () => {
+const addUpperRhineToMap = () => {
 
-const geojson = require('./map_layers_data/north_germany.json')
+const geojson = require('./map_layers_data/upper_rhine.json')
 
 map.on('load', function () {
 
   // console.log(geojson)
 
-  map.addSource('north_germany', {
+  map.addSource('upper_rhine', {
     "type": "geojson",
     "data": geojson
   });
@@ -27,9 +27,9 @@ map.on('load', function () {
   }
 
   map.addLayer({
-      "id": "north_germany",
+      "id": "upper_rhine",
         "type": "fill",
-        "source": "north_germany",
+        "source": "upper_rhine",
         'paint': {
           'fill-color': '#F7DB64',
           'fill-opacity': 0.3,
@@ -38,9 +38,9 @@ map.on('load', function () {
   }, firstSymbolId);
 
   map.addLayer({
-      "id": "north_germany_line",
+      "id": "upper_rhine_line",
         "type": "line",
-        "source": "north_germany",
+        "source": "upper_rhine",
         'paint': {
           'line-color': '#F7DB64',
           'line-width': 0.5,
@@ -49,8 +49,7 @@ map.on('load', function () {
 
 
 
-
-    map.on('click', 'north_germany', function (e) {
+    map.on('click', 'upper_rhine', function (e) {
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         // .setHTML(e.features[0].properties.naamnl)
@@ -62,4 +61,5 @@ map.on('load', function () {
 
 };
 
-export { addNorthgermanyToMap };
+export { addUpperRhineToMap };
+
