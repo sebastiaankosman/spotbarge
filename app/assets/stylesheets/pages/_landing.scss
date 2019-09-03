@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .home-background {
   height: 100%;
   background-image: image-url("bargehome.png");
