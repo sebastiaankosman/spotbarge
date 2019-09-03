@@ -4,7 +4,7 @@ background-color: $ldblue;
 }
 
 .booking-form {
-  height: 700px;
+  height: 900px;
   width: 300px;
 }
 
@@ -38,32 +38,32 @@ background-color: $ldblue;
   margin-top: 50px;
 }
 
-.cargo-booking-name {
+.booking-name {
   display: flex;
   flex-direction: column;
 }
 
-.cargo-booking-load-date {
+.booking-load-date {
   display: flex;
   flex-direction: column;
 }
 
-.cargo-booking-volume {
+.booking-volume {
   display: flex;
   flex-direction: column;
 }
 
-.cargo-booking-load-location {
+.booking-load-location {
   display: flex;
   flex-direction: column;
 }
 
-.cargo-booking-discharge-location {
+.booking-discharge-location {
   display: flex;
   flex-direction: column;
 }
 
-.cargo-booking-delete {
+.booking-delete {
   display: flex;
   flex-direction: column;
 }

@@ -1,25 +1,95 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="container">
+  <div class="create-account-header">
+    <p>Create an account</p>
+  </div>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
+  <div class="form-inputs form-inputs-create-account">
+    <div class="create-account-user create-account-card mr-5">
+      <p>User details</p>
+      <%= f.input :first_name,
+      placeholder: 'first name',
+      label:false,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "first_name"} %>
+      <%= f.input :last_name,
+      placeholder: 'last name',
+      label:false,
+      required: true,
+      input_html: { autocomplete: "last_name"} %>
+      <%= f.input :email,
+      placeholder: 'Email',
+      label:false,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "email" }%>
+      <%= f.input :ice_chat,
+      placeholder: 'icechat',
+      label:false,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "ice_chat"} %>
+    </div>
+    <div class="create-account-login create-account-card ml-5">
+      <p>Login details</p>
+      <%= f.input :password,
+      placeholder: 'password',
+      label:false,
+      required: true,
+      # hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+      input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+      placeholder: 'Password confirmation',
+      label:false,
+      required: true,
+      input_html: { autocomplete: "new-password" } %>
+    </div>
+    <div class="create-account-company create-account-card">
+      <p>company fields</p>
+      <%= f.input :company_name,
+      placeholder: 'Company name',
+      label:false,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "first_name"} %>
+      <%= f.input :type_of_company,
+      placeholder: 'type of company',
+      label: '',
+      as: :radio_buttons,
+      collection: ['Oilsupplier', 'Broker'],
+      autofocus: true,
+      input_html: { autocomplete: "first_name"} %>
+      <%= f.input :phone_number,
+      placeholder: 'Phonenumber',
+      label:false,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "phone_number" }%>
+      <%= f.input :location,
+      placeholder: 'country',
+      label:false,
+      required: true,
+      input_html: { autocomplete: "country"} %>
+      <%= f.input :city,
+      placeholder: 'city',
+      label:false,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "city"} %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+      <div class="form-actions form-buttons form-margins">
+        <div class="btn-back-login mr-2"><%= link_to "Cancel", "/"%></div>
+        <div class="btn-forward-login ml-2"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Sign up" %></div>
+      </div>
+    </div>
+
+
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+  <% end %>
+
+  <!-- <%= render "devise/shared/links" %> -->
+</div>
+<br>
