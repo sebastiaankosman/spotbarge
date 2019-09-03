@@ -4,6 +4,9 @@ import { initMapbox } from 'plugins/init_mapbox';
 import { initUpdateNavbarOnScroll } from '../components/navbar'
 import { addBeneluxToMap } from '../plugins/add_benelux_to_map';
 import { addNorthgermanyToMap } from '../plugins/add_northgermany_to_map';
+import { addMiddleRhineToMap } from '../plugins/add_middle_rhine_to_map';
+import { addUpperRhineToMap } from '../plugins/add_upper_rhine_to_map';
+import { addRhineLineToMap } from '../plugins/add_rhine_line_to_map.js';
 
 initUpdateNavbarOnScroll()
 
@@ -135,3 +138,6 @@ if (document.querySelectorAll('legend')) {
 initMapbox();
 addBeneluxToMap();
 addNorthgermanyToMap();
+addMiddleRhineToMap ();
+addUpperRhineToMap ();
+addRhineLineToMap();

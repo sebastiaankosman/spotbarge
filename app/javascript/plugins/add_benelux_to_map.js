@@ -5,7 +5,6 @@ import { map } from '../plugins/init_mapbox';
 const addBeneluxToMap = () => {
 
 const geojson = require('./map_layers_data/benelux.json')
-  console.log(geojson)
 
 map.on('load', function () {
 
@@ -35,6 +34,16 @@ map.on('load', function () {
           'fill-color': '#F7DB64',
           'fill-opacity': 0.3,
           'fill-outline-color': 'rgba(255,255,255, 1)',
+          }
+  }, firstSymbolId);
+
+  map.addLayer({
+      "id": "benelux_line",
+        "type": "line",
+        "source": "benelux",
+        'paint': {
+          'line-color': '#F7DB64',
+          'line-width': 0.5,
           }
   }, firstSymbolId);
 
