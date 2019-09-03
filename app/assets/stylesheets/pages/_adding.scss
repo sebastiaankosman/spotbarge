@@ -1,1 +1,67 @@
 // File for the add barge and carge pages.
+.container-create-offer {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 1140px;
+}
+
+.booking-top-row {
+  width: 1440px;
+  height: 100%;
+  background-color: $ldblue;
+}
+
+.booking-form-left {
+  // border: 5px solid red;
+  width: 550px;
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    .form-control-label {
+      font-size: 25px;
+      color: $mgreen;
+    }
+    .form-control {
+      width: 290px;
+    }
+  }
+  .date-field {
+    display: flex;
+    justify-content: space-between;
+    .string {
+      font-size: 25px;
+      color: $mgreen;
+    }
+    #cargo_cargo_load_window {
+      width: 290px;
+    }
+  }
+}
+
+.booking-form-right {
+  .form-control-label {
+    font-size: 25px;
+    color: $mgreen;
+  }
+  .form-check {
+    width: 100px;
+  }
+  .select {
+    width: 290px;
+  }
+}
+
+.booking-text {
+  margin-left: 110px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.booking-form-right {
+  // border: 5px solid red;
+  width: 550px;
+}
+
+
