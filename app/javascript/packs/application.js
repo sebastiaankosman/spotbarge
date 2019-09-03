@@ -2,6 +2,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import "bootstrap";
 import { initMapbox } from 'plugins/init_mapbox';
 import { initUpdateNavbarOnScroll } from '../components/navbar'
+import { addBeneluxToMap } from '../plugins/add_benelux_to_map';
+import { addNorthgermanyToMap } from '../plugins/add_northgermany_to_map';
 
 initUpdateNavbarOnScroll()
 
@@ -131,3 +133,5 @@ if (document.querySelectorAll('legend')) {
 
 // import { initMapbox } from 'plugins/init_mapbox';
 initMapbox();
+addBeneluxToMap();
+addNorthgermanyToMap();
