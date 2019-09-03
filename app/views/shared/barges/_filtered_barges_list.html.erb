@@ -1,37 +1,37 @@
   <div class="booking-card">
     <ul>
-      <% cargos.each do |cargo| %>
+      <% @barges.each do |barge| %>
         <div class="booking-specifics">
           <div class="bookings-details">
 
             <div class="booking-name">
-            <h4>Cargo</h4>
-            <div><%= cargo.cargo_name %></div>
+            <h4>Barge</h4>
+            <div><%= barge.barge_name %></div>
             </div>
 
             <div class="booking-load-date">
             <h4>Load date</h4>
-            <div><%= cargo.cargo_load_window %></div>
+            <div><%= barge.barge_load_window %></div>
             </div>
 
             <div class="booking-volume">
-            <h4>Volume (ton)</h4>
-            <div><%= cargo.volume %></div>
+            <h4>Capicity (m3)</h4>
+            <div><%= barge.capacity %></div>
             </div>
 
             <div class="booking-load-location">
             <h4>Load location</h4>
-            <div><%= cargo.load_location %></div>
+            <div><%=  barge.barge_area %></div>
             </div>
 
             <div class="booking-discharge-location">
             <h4>Discharge location</h4>
-            <div><%= cargo.discharge_location %></div>
+            <div><%= barge.barge_area %></div>
             </div>
 
             <div class="booking-delete">
-            <div><i class="far fa-trash-alt"></i></div>
-            <div><%= link_to 'delete', cargo_path(cargo), method: :delete %>
+            <div>""</div>
+            <div><%= link_to 'Delete', barge_path(barge), method: :delete %>
           </div>
           </div>
 
@@ -40,4 +40,3 @@
     <% end %>
   </ul>
 </div>
-

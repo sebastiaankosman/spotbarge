@@ -52,10 +52,10 @@ users_attributes = [
     company_name: 'Shell',
     type_of_company: 'Oilsupplier',
     city: 'Rotterdam',
-    country: 'The Netherlands',
+    location: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
-    notification_sms: 'no'
+    notification_sms: 'no',
   },
   {
     first_name: 'Onne',
@@ -66,7 +66,7 @@ users_attributes = [
     company_name: 'Vitol',
     type_of_company: 'Oilsupplier',
     city: 'Rotterdam',
-    country: 'The Netherlands',
+    location: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'no'
@@ -80,7 +80,7 @@ users_attributes = [
     company_name: 'Glencore',
     type_of_company: 'Oilsupplier',
     city: 'London',
-    country: 'The Netherlands',
+    location: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'Yes'
@@ -94,7 +94,7 @@ users_attributes = [
     company_name: 'ExxonMobil',
     type_of_company: 'Oilsupplier',
     city: 'Antwerp',
-    country: 'The Netherlands',
+    location: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'Yes'
@@ -108,7 +108,7 @@ users_attributes = [
     company_name: 'BP',
     type_of_company: 'Oilsupplier',
     city: 'Rotterdam',
-    country: 'The Netherlands',
+    location: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'Yes'
@@ -122,7 +122,7 @@ users_attributes = [
     company_name: 'Interstream',
     type_of_company: 'Broker',
     city: 'Rotterdam',
-    country: 'The Netherlands',
+    location: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'no'
@@ -136,7 +136,7 @@ users_attributes = [
     company_name: 'Victrol',
     type_of_company: 'Broker',
     city: 'Antwerp',
-    country: 'Belgium',
+    location: 'Belgium',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'no',
@@ -150,7 +150,7 @@ users_attributes = [
     company_name: 'Unibarge',
     type_of_company: 'Broker',
     city: 'Rotterdam',
-    country: 'The Netherlands',
+    location: 'The Netherlands',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'Yes'
@@ -164,7 +164,7 @@ users_attributes = [
     company_name: 'Gefo',
     type_of_company: 'Broker',
     city: 'Hamburg',
-    country: 'Germany',
+    location: 'Germany',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'Yes'
@@ -178,7 +178,7 @@ users_attributes = [
     company_name: 'Stetra',
     type_of_company: 'Broker',
     city: 'Ludwigshafen',
-    country: 'Germany',
+    location: 'Germany',
     phone_number: '123456789',
     notification_email: 'yes',
     notification_sms: 'Yes'
@@ -192,10 +192,12 @@ companies = ['Shell', 'Petrobras', 'BP', 'Vitol', 'Glencore']
 
 oil_users.each do |oil_user|
   OilCompany.create!(name: oil_user.company_name, user: oil_user)
+  oil_user.oil_company = OilCompany.last
 end
 
 brokers.each do |broker|
   Broker.create!(name: broker.company_name, user: broker)
+  broker.broker = Broker.last
 end
 
 barge_attributes = [

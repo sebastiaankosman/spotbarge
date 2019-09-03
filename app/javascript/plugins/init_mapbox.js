@@ -27,9 +27,9 @@ const initMapbox = () => {
           type: 'circle',
           source: {
             type: 'vector',
-            url: 'mapbox://styles/mapbox/streets-v1'
+            url: 'mapbox://styles/mapbox/streets-v10'
           },
-          'source-layer': 'your-source-layer-here',
+          'source-layer': 'place_label',
           paint: {
             'circle-radius': [
               '/',

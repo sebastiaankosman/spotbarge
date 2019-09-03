@@ -1,3 +1,4 @@
+
 <div class="middle-row">
   <% @cargos.each_with_index do |cargo, i| %>
   <% if i%2 == 0 %>
@@ -8,6 +9,7 @@
       <div class="cargo-name-card">
         <h3>Cargo</h3>
         <h4><%= cargo.cargo_name %></h4>
+        <a class="fas fa-tint fa-lg"></a>
       </div>
 
 
@@ -21,8 +23,7 @@
           <div>Load date </div>
           <div>Volume (ton) </div>
         </div>
-
-        <ul class="list-unstyled">
+        <ul class="list-unstyled results-specifics">
           <li><%= cargo.load_location %></li>
           <li><%= cargo.discharge_location %></li>
           <li><%= cargo.gas_free ? 'Yes' : 'No' %></li>
@@ -46,3 +47,5 @@
     <% end %>
   </div>
 </div>
+
+

@@ -1,1 +1,22 @@
-<h1>Create nomination</h1>
+<h1>
+  <% if @barge %>
+    <%= @barge.barge_name %>
+  <% else %>
+    <%= @cargo.cargo_name %>
+    <% end %>
+</h1>
+    <%= @user.email %> <br>
+    <%= @user.first_name %> <%= @user.last_name %> <br>
+    <%= @user.company_name %> <br>
+    <%= @user.type_of_company %> <br>
+    <%= @user.city %>, <%= @user.country %> <br>
+    <%= @user.phone_number %> <br>
+
+<h3><%= @booking.created_at %></h3>
+Cargo - <%= @cargo.cargo_name %> <br>
+Load Location - <%= @cargo.load_location %> <br>
+Discharge Location - <%= @cargo.discharge_location %> <br>
+Free Hours - <%= @booking.free_hours %> <br>
+Demurrage Rate - <%= @booking.demurrage_rate %> <br>
+Freight Rate - <%= @booking.freight_rate %> € per ton <br>
+Short Notice - <%= @booking.short_notice ? "Yes" : "No" %> <br>

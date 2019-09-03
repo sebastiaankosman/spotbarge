@@ -23,7 +23,7 @@ class BargesController < ApplicationController
     @barges = @barges.by_volume(VOLUMES[params[:capacity].to_sym]) if params[:capacity] && params[:capacity].length.positive?
     @barges = @barges.by_load_window(Date.parse(params[:barge_load_window])) if params[:barge_load_window] && params[:barge_load_window].length.positive?
     # @barges = @barges.by_barge_area(params[:barge_area]) if params[:barge_area]
-    @barges
+    # @barges
 
     @barges_with_coordinates = Barge.geocoded #returns flats with coordinates
 
@@ -35,21 +35,11 @@ class BargesController < ApplicationController
     end
   end
 
-  # def filter
-    # POST /barges/filter
-
-    @barges = Barge.geocoded #returns flats with coordinates
-
-    @markers = @barges.map do |barge|
-      {
-        lat: barge.latitude,
-        lng: barge.longitude
-      }
-
-  # end
 
   def new
     @barge = Barge.new
+    @barges = Barge.where(broker_id: current_user.broker.id)
+
   end
 
   def create
@@ -61,6 +51,7 @@ class BargesController < ApplicationController
     end
   end
 
+
   private
 
   # define barge params
@@ -69,5 +60,4 @@ class BargesController < ApplicationController
           .permit(:barge_name, :capacity, :barge_area,
                   :barge_load_window, :gas_free, :pre_cargo, :barge_type)
   end
-end
 end

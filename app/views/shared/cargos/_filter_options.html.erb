@@ -1,49 +1,51 @@
-<h2>Find your cargo here</h2>
-<%= simple_form_for '', method: :get do |f| %>
-<%= f.input :load_location, as: :check_boxes, collection: @load_locations %>
-<%= f.input :cargo_type, as: :check_boxes, collection: @cargo_type %>
-<%= f.input :volume, collection: [['< 1500', 0], ['1500 - 2500', 1],
-['2500 - 4000', 2], ['4000 +', 3]] %>
-<%= f.date_field :cargo_load_window  %>
-<%= f.submit 'Search' %>
-<% end %>
 
-<!--
-<div class="container">
-  <div class="top-row">
-    <div class="cargo-text"><h1>Find your cargo here</h1></div>
-    <div class="filter-result-card">
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Area
+    <%= simple_form_for '', method: :get do |f| %>
+
+
+  <div class="filter-result-card">
+
+ <div class="cargo-text">
+      <h1>Find your cargo here</h1>
         </div>
-        <div class="white-filter-box">
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
+        <div class="filter-boxes">
+        <div class="filter-box-card">
+          <div class="green-filter-box">
+            Area
+          </div>
+          <div class="white-filter-box">
+            <%= f.input :barge_areas, legend: '', as: :check_boxes, collection: [['ARA', 'ARA'], ['Rhine',
+              'Rhine'], ['Middle-Rhine', 'Middle-Rhine'], ['Upper-Rhine', 'Upper-Rhine']], legend_html: { style: 'display: none;' } %>
+          </div>
         </div>
+        <div class="filter-box-card">
+          <div class="green-filter-box">
+            Cargo
+          </div>
+          <div class="white-filter-box">
+            <%= f.input :barge_types, label: false, as: :check_boxes, collection: [['CPP', 'CPP'], ['Fuel', 'Fuel'],
+              ['Chemicals', 'Chemicals'], ['Bunker', 'Bunker']], label_html: { class: 'hidden' } %>
+          </div>
+        </div>
+        <div class="filter-box-card">
+          <div class="green-filter-box">
+            Volume
+          </div>
+          <div class="volume-box">
+            <%= f.input :volume, label: false, collection: [['< 1500', 0], ['1500 - 2500', 1],
+              ['2500 - 4000', 2], ['4000 +', 3]] %>
+          </div>
+        </div>
+        <div class="filter-box-card">
+          <div class="green-filter-box">
+            Load date
+          </div>
+          <div class="date-box">
+            <%= f.date_field :cargo_load_window  %>
+           </div>
+           </div>
+        </div>
+        <div class="search-button"><%= f.submit 'Search', :class => 'btn-home' %></div>
       </div>
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Cargo
-        </div>
-        <div class="white-filter-box">
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-        </div>
-      </div>
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Volume in tons
-        </div>
-      </div>
-      <div class="filter-box-card">
-        <div class="green-filter-box">
-          Load date
-        </div>
-      </div>
-    </div>
- -->
+
+    <% end %>
+

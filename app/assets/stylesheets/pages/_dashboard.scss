@@ -28,6 +28,10 @@
   // vertical-align: middle;
 }
 
+.dash-arrow {
+  color: $white;
+}
+
 .welcome-body {
   font-size: 25px;
 }
@@ -45,21 +49,70 @@
 }
 
 .sales-dash {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
   background-color: $mgreen;
   color: $white;
-  height: 170px;
+  height: 183px;
+}
+
+.sales-dash-block {
+  width: 33.33%;
 }
 
 .sales-dash2 {
   background-color: $llblue;
   color: $black;
-  height: 170px;
+  height: 183px;
+}
+
+.sales-h-text {
+  font-size: 18px;
+}
+
+.sales-total {
+  font-size: 28px;
+}
+
+.sales-dash2 {
+  font-size: 20px;
+}
+
+.sales-numbers {
+  font-size: 28px;
+  text-decoration: underline;
+  color: $yellow;
 }
 
 .middash {
   background-color: $mgreen;
   color: $white;
   height: 113px;
+}
+
+.waterlevels-dash {
+  display: flex;
+  justify-content: space-around;
+}
+
+.waterlevels-dash-content {
+  // border: 5px solid white;
+}
+
+.waterlevels-title {
+  font-size: 40px;
+  vertical-align: middle;
+  line-height: 113px;
+}
+
+.waterlevels-location {
+  font-size: 18px;
+}
+
+.waterlevels-volume {
+  font-size: 29px;
+  color: $yellow;
 }
 
 .botdash {

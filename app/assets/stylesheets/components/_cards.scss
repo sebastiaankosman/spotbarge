@@ -23,19 +23,24 @@
 
 .cargo-name-card {
   width: 33%;
-  margin-left: 2%;
+  margin-left: 10%;
   padding-top: 20px;
 }
 
 .cargo-specifics {
   width: 45%;
   padding-top: 20px;
+  padding-right: 300px;
   display:flex;
   justify-content: space-between;padding-right: 200px;
 }
 
 .list-unstyled{
   padding-top: 40px;
+}
+
+.results-specifics {
+  width: 200px;
 }
 
 .cargo-contact-card {
@@ -61,10 +66,8 @@
   padding-top: 25px;
 }
 
-.cargo-text {
-  color: $mgreen;
-  margin-top: 50px;
-  margin-bottom: 30px;
+.middle-row {
+  width: 100vw;
 }
 
 

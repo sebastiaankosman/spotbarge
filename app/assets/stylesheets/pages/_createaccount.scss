@@ -1,1 +1,22 @@
 // File for all the account pages
+.create-account-header {
+  margin-top: 50px;
+  color: $mgreen;
+  font-size: 30px;
+}
+
+.form-inputs-create-account {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.create-account-card{
+  .form-group {
+    margin-bottom: 15px;
+  }
+}
+
+
+
