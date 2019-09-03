@@ -6,7 +6,7 @@
   <%= f.error_notification %>
   <div class="form-inputs form-inputs-create-account">
     <div class="create-account-user create-account-card mr-5">
-      <p>User details</p>
+      <p class="create-account-sub-header">User details</p>
       <%= f.input :first_name,
       placeholder: 'first name',
       label:false,
@@ -32,7 +32,7 @@
       input_html: { autocomplete: "ice_chat"} %>
     </div>
     <div class="create-account-login create-account-card ml-5">
-      <p>Login details</p>
+      <p class="create-account-sub-header">Login details</p>
       <%= f.input :password,
       placeholder: 'password',
       label:false,
@@ -46,18 +46,11 @@
       input_html: { autocomplete: "new-password" } %>
     </div>
     <div class="create-account-company create-account-card">
-      <p>company fields</p>
+      <p class="create-account-sub-header">Company fields</p>
       <%= f.input :company_name,
       placeholder: 'Company name',
       label:false,
       required: true,
-      autofocus: true,
-      input_html: { autocomplete: "first_name"} %>
-      <%= f.input :type_of_company,
-      placeholder: 'type of company',
-      label: '',
-      as: :radio_buttons,
-      collection: ['Oilsupplier', 'Broker'],
       autofocus: true,
       input_html: { autocomplete: "first_name"} %>
       <%= f.input :phone_number,
@@ -77,11 +70,18 @@
       required: true,
       autofocus: true,
       input_html: { autocomplete: "city"} %>
-
-      <div class="form-actions form-buttons form-margins">
+      <%= f.input :type_of_company,
+      placeholder: 'type of company',
+      label: '',
+      as: :radio_buttons,
+      collection: ['Oilsupplier', 'Broker'],
+      autofocus: true,
+      input_html: { autocomplete: "first_name"} %>
+      <div class="form-actions form-buttons form-create-margin">
         <div class="btn-back-login mr-2"><%= link_to "Cancel", "/"%></div>
         <div class="btn-forward-login ml-2"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Sign up" %></div>
       </div>
+
     </div>
 
 
