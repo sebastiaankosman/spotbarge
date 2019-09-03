@@ -39,7 +39,7 @@ class BargesController < ApplicationController
   def new
     @barge = Barge.new
     @barges = Barge.where(broker_id: current_user.broker.id)
-
+    barge_type
   end
 
   def create
@@ -51,7 +51,6 @@ class BargesController < ApplicationController
     end
   end
 
-
   private
 
   # define barge params
@@ -59,5 +58,13 @@ class BargesController < ApplicationController
     params.require(:barge)
           .permit(:barge_name, :capacity, :barge_area,
                   :barge_load_window, :gas_free, :pre_cargo, :barge_type)
+  end
+
+  def barge_type
+    @barge_type = []
+    Barge.all.each do |b|
+      @barge_type << [b.barge_type, b.barge_type]
+    end
+    @barge_type = @barge_type.uniq
   end
 end

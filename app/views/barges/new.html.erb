@@ -1,21 +1,33 @@
 <div class="container">
-<div class="booking-top-row">
-  <div class= "booking-text">
-    <h1>Enter your barge here</h1>
-  </div>
-  <div class="booking-form">
-    <%= simple_form_for(@barge) do |f| %>
-    <%= f.input :barge_name %>
-    <%= f.input :capacity %>
-    <%= f.input :barge_area, as: :check_boxes, collection: [['ARA', 'ARA'], ['Rhine', 'Rhine'], ['Northern-Canals', 'Northern-Canals'], ['Upper-Rhine', 'Upper-Rhine']] %>
-    <div class="date-field">
-      <%= f.label :date %>
-      <%= f.date_field :barge_load_window %>
+  <div class="booking-top-row">
+    <div class= "booking-text">
+      <h1>Enter your barge here</h1>
     </div>
-    <%= f.input :barge_type, as: :check_boxes, collection: @bargo_type %>
-    <%= f.input :gas_free %>
-    <%= f.submit %>
-    <% end %>
+    <div class="booking-form">
+      <%= simple_form_for(@barge) do |f| %>
+      <%= f.input :barge_name %>
+      <%= f.input :capacity %>
+      <div class="barge-area">
+        <%= f.label :barge_area %>
+        <%= f.input :barge_area, as: :check_boxes, collection: [['ARA', 'ARA'], ['Rhine', 'Rhine'], ['Northern-Canals', 'Northern-Canals'], ['Upper-Rhine', 'Upper-Rhine']] %>
+      </div>
+      <div class="date-field">
+        <%= f.label :date %>
+        <%= f.date_field :barge_load_window %>
+      </div>
+      <div class="barge-type">
+        <%= f.label :barge_type %>
+        <%= f.input :barge_type, as: :check_boxes, collection: @barge_type %>
+      </div>
+      <div class="gas-free">
+        <%= f.label :gas_free %>
+        <%= f.input :gas_free %>
+      </div>
+      <div class="pre-cargo">
+        <%= f.input :pre_cargo %>
+      </div>
+      <%= f.submit %>
+      <% end %>
+    </div>
+    <%= render 'shared/barges/filtered_barges_list', barges: @barges %>
   </div>
-  <%= render 'shared/barges/filtered_barges_list', barges: @barges %>
-</div>
