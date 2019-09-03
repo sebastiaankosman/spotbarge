@@ -1,7 +1,7 @@
 <% if @user.oil_company? %>
   <h2>Confirm barge</h2>
   <%= simple_form_for [@barge, @booking] do |f| %>
-    <%= f.input :booker_cargo_id, collection:  %>
+    <%= f.input :booker_cargo_id, collection: @cargos.map { |cargo| [cargo.cargo_name, cargo.id] } %>
     <%= f.input :freight_rate %>
     <%= f.input :free_hours %>
     <%= f.input :demurrage_rate %>
@@ -12,6 +12,7 @@
 <% elsif @user.broker? %>
   <h2>Confirm cargo</h2>
     <%= simple_form_for [@cargo, @booking] do |f| %>
+          <%= f.input :booker_barge_id, collection: @barges.map { |barge| [barge.barge_name, barge.id] } %>
       <%= f.input :freight_rate %>
       <%= f.input :free_hours %>
       <%= f.input :demurrage_rate %>
