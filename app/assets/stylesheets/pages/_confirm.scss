@@ -1,1 +1,33 @@
-// File for the conformation page
+// File for the new booking page
+.booking-new-backgound {
+  min-width: 1140px;
+  min-height: 647px;
+  background-color: $llblue;
+}
+
+.new-booking-left {
+  width: 500px;
+  .form-group {
+    width: 300px;
+  }
+}
+
+.new-booking-right {
+  width: 500px;
+  .form-group {
+    width: 300px;
+  }
+}
+
+.new-booking-right .btn-forward-login input.btn {
+    font-size: 22px;
+}
+
+.booking-new-font {
+  font-size: 25px;
+  color: $dgreen;
+}
+
+.new-booking-right-padding {
+  padding-bottom: 190px;
+}

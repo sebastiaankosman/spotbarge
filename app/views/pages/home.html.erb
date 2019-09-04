@@ -3,10 +3,31 @@
     <div class="container home-font mt-5 ml-5">
       <h1 class="mb-2 ml-5">We bring efficiency <br>to the shipping industry</h1>
       <p class="ml-5">The platform where oil suppliers and shipbrokers for inland<br>barging Europe will efficiently benefit from eachother.</p>
+
+      <% if user_signed_in? %>
+        <% if current_user.type_of_company == "Oilsupplier" %>
+        <div class="home-buttons pt-5 ml-5">
+          <div class="btn-home mr-4"><i class="fas fa-arrow-right"></i><%= link_to " Find a Barge", "/barges"%>
+          </div>
+          <div class="btn-home"><i class="fas fa-arrow-right"></i><%= link_to " Enter a Cargo", "/cargos/new"%>
+          </div>
+        </div>
+        <% else %>
+        <div class="home-buttons pt-5 ml-5">
+          <div class="btn-home mr-4"><i class="fas fa-arrow-right"></i><%= link_to " Enter a Barge", "/barges/new"%>
+          </div>
+          <div class="btn-home"><i class="fas fa-arrow-right"></i><%= link_to " Find a Cargo", "/cargos"%>
+          </div>
+        </div>
+        <% end %>
+      <% else %>
       <div class="home-buttons pt-5 ml-5">
         <div class="btn-home mr-4"><i class="fas fa-arrow-right"></i><%= link_to " Find a Barge", "/barges"%></div>
         <div class="btn-home"><i class="fas fa-arrow-right"></i><%= link_to " Find a Cargo", "/cargos"%></div>
       </div>
+      <% end %>
+
+
     </div>
   </div>
 </div>

@@ -1,20 +1,21 @@
-<div class="container">
+<div class="container container-create-offer">
   <div class="booking-top-row">
     <div class= "booking-text">
       <h1>Enter your barge here</h1>
     </div>
-    <div class="booking-form">
-      <%= simple_form_for(@barge) do |f| %>
-      <%= f.input :barge_name %>
-      <%= f.input :capacity %>
-      <div class="barge-area">
+    <%= simple_form_for(@barge) do |f| %>
+      <div class="booking-form pb-5">
+        <div class="booking-form-left">
+        <%= f.input :barge_name %>
+        <%= f.input :capacity %>
+          <div class="barge-area">
         <%= f.label :barge_area %>
         <%= f.input :barge_area, as: :check_boxes, collection: @barge_area %>
-      </div>
-      <div class="date-field">
+          </div>
+          <div class="date-field">
         <%= f.label :date %>
         <%= f.date_field :barge_load_window %>
-      </div>
+          </div>
       <div class="barge-type">
         <%= f.label :barge_type %>
         <%= f.input :barge_type, as: :check_boxes, collection: @barge_type %>
@@ -26,8 +27,11 @@
       <div class="pre-cargo">
         <%= f.input :pre_cargo %>
       </div>
-      <%= f.submit %>
-      <% end %>
-    </div>
-    <%= render 'shared/barges/filtered_barges_list', barges: @barges %>
+<div class="btn-forward-login mt-5"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Enter Cargo", class: "btn-forward-login" %></div>
+
+      </div>
+    <% end %>
   </div>
+
+    <%= render 'shared/barges/filtered_barges_list', barges: @barges %>
+</div>
