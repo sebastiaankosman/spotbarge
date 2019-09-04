@@ -53,7 +53,7 @@ users_attributes = [
     type_of_company: 'Oilsupplier',
     city: 'Rotterdam',
     location: 'The Netherlands',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'no',
   },
@@ -67,7 +67,7 @@ users_attributes = [
     type_of_company: 'Oilsupplier',
     city: 'Rotterdam',
     location: 'The Netherlands',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'no'
   },
@@ -81,7 +81,7 @@ users_attributes = [
     type_of_company: 'Oilsupplier',
     city: 'London',
     location: 'The Netherlands',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'Yes'
   },
@@ -95,7 +95,7 @@ users_attributes = [
     type_of_company: 'Oilsupplier',
     city: 'Antwerp',
     location: 'The Netherlands',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'Yes'
   },
@@ -109,7 +109,7 @@ users_attributes = [
     type_of_company: 'Oilsupplier',
     city: 'Rotterdam',
     location: 'The Netherlands',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'Yes'
   },
@@ -123,7 +123,7 @@ users_attributes = [
     type_of_company: 'Broker',
     city: 'Rotterdam',
     location: 'The Netherlands',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'no'
   },
@@ -137,7 +137,7 @@ users_attributes = [
     type_of_company: 'Broker',
     city: 'Antwerp',
     location: 'Belgium',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'no',
   },
@@ -151,7 +151,7 @@ users_attributes = [
     type_of_company: 'Broker',
     city: 'Rotterdam',
     location: 'The Netherlands',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'Yes'
   },
@@ -165,7 +165,7 @@ users_attributes = [
     type_of_company: 'Broker',
     city: 'Hamburg',
     location: 'Germany',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'Yes'
   },
@@ -179,7 +179,7 @@ users_attributes = [
     type_of_company: 'Broker',
     city: 'Ludwigshafen',
     location: 'Germany',
-    phone_number: '123456789',
+    phone_number: '+447788217070',
     notification_email: 'yes',
     notification_sms: 'Yes'
   }
