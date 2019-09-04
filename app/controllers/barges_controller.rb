@@ -29,9 +29,7 @@ class BargesController < ApplicationController
     @barges.each do |b|
       @markers << { lat: b.latitude, lng: b.longitude } unless b.latitude.nil? && b.longitude.nil?
     end
-
   end
-
 
   def new
     @barge = Barge.new
@@ -55,6 +53,14 @@ class BargesController < ApplicationController
     params.require(:barge)
           .permit(:barge_name, :capacity, :barge_area,
                   :barge_load_window, :gas_free, :pre_cargo, :barge_type)
+  end
+
+  def barge_area
+    @barge_area = []
+    Barge.all.each do |b|
+      @barge_area << [b.barge_area, b.barge_area]
+    end
+    @barge_area = @barge_area.uniq
   end
 
   def barge_type

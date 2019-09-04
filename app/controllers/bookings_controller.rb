@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   def new
+    fix_params
     @booking = Booking.new
     @user = current_user
     if @user.oil_company?
@@ -75,6 +76,11 @@ class BookingsController < ApplicationController
   end
 
   private
+
+  def fix_params
+    params[:cargo_id] = params[:cargo_id].split("/").first if params[:cargo_id]
+    params[:barge_id] = params[:barge_id].split("/").first if params[:barge_id]
+  end
 
   def booking_params
     params.require(:booking).permit(:booker_cargo_id, :booker_barge_id, :freight_rate, :free_hours, :demurrage_rate, :short_notice, :comment)
