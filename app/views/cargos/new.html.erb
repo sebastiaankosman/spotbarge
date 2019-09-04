@@ -19,7 +19,7 @@
         </div>
 
         <div class="booking-form-right">
-          <div class="cargo-type">
+          <div class="cargo-type d-flex justify-content-between">
             <div class="cargo-type-text">
               <p>Cargo type</p>
             </div>
@@ -28,15 +28,15 @@
             </div> -->
             <%= f.input :cargo_type, label:false, collection: @cargo_type %>
           </div>
-          <div class="gas-free">
-            <%= f.label :gas_free, label:false %>
+          <div class="gas-free align-middle">
+            <!-- <%= f.label :gas_free, label:false %> -->
             <%= f.input :gas_free%>
           </div>
 
           <div>
   <!--         <div class="btn-forward-login ml-2"><i class="fas fa-arrow-right"></i><%= f.submit %></div> -->
 
-            <div class="btn-forward-login"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Enter Cargo", class: "btn-forward-login" %></div>
+            <div class="btn-forward-login mt-5"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Enter Cargo", class: "btn-forward-login" %></div>
 
 
           </div>
