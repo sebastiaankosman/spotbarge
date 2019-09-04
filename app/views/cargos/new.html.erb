@@ -20,10 +20,13 @@
 
         <div class="booking-form-right">
           <div class="cargo-type">
+            <div class="cargo-type-text">
+              <p>Cargo type</p>
+            </div>
             <!-- <div class="cargo-type-text">
               <%= f.label :cargo_type %>
             </div> -->
-            <%= f.input :cargo_type, collection: @cargo_type %>
+            <%= f.input :cargo_type, label:false, collection: @cargo_type %>
           </div>
           <div class="gas-free">
             <%= f.label :gas_free, label:false %>
