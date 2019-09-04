@@ -81,3 +81,47 @@
   font-family: $body-font;
   font-size: 20px;
 }
+
+.btn-back-nomination {
+  color: $white;
+  font-size: 20px;
+  background-color: $lgreen;
+  padding: 8px 24px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 234px;
+  height: 50px;
+}
+
+.btn-back-nomination a {
+  color: $white;
+  text-decoration: none;
+}
+
+.btn-back-nomination:hover {
+  opacity: 0.6;
+}
+
+.btn-forward-nomination {
+  color: #4A4A4A;
+  font-family: roboto;
+  font-size: 20px;
+  background-color: #F7DB64;
+  padding: 8px 24px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 234px;
+  height: 50px;
+}
+
+.btn-nomination-login:hover {
+  opacity: 0.6;
+}
