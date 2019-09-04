@@ -5,19 +5,16 @@
     </div>
     <%= simple_form_for(@cargo) do |f| %>
       <div class="booking-form pb-5">
-
         <div class="booking-form-left">
           <%= f.input :cargo_name %>
           <%= f.input :volume %>
           <%= f.input :load_location %>
           <%= f.input :discharge_location %>
-
           <div class="date-field">
             <%= f.label :load_date %>
             <%= f.date_field :cargo_load_window %>
           </div>
         </div>
-
         <div class="booking-form-right">
           <div class="cargo-type d-flex justify-content-between">
             <div class="cargo-type-text">
@@ -32,13 +29,8 @@
             <!-- <%= f.label :gas_free, label:false %> -->
             <%= f.input :gas_free%>
           </div>
-
           <div>
-  <!--         <div class="btn-forward-login ml-2"><i class="fas fa-arrow-right"></i><%= f.submit %></div> -->
-
             <div class="btn-forward-login mt-5"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Enter Cargo", class: "btn-forward-login" %></div>
-
-
           </div>
         </div>
       </div>

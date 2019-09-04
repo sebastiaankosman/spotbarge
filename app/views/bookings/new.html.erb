@@ -1,23 +1,109 @@
-<% if @user.oil_company? %>
-  <h2>Confirm barge</h2>
-  <%= simple_form_for [@barge, @booking] do |f| %>
-    <%= f.input :booker_cargo_id, collection: @cargos.map { |cargo| [cargo.cargo_name, cargo.id] } %>
-    <%= f.input :freight_rate %>
-    <%= f.input :free_hours %>
-    <%= f.input :demurrage_rate %>
-    <%= f.input :short_notice %>
-    <%= f.input :comment %>
-    <%= f.submit :create %>
-  <% end %>
-<% elsif @user.broker? %>
-  <h2>Confirm cargo</h2>
-    <%= simple_form_for [@cargo, @booking] do |f| %>
-          <%= f.input :booker_barge_id, collection: @barges.map { |barge| [barge.barge_name, barge.id] } %>
-      <%= f.input :freight_rate %>
-      <%= f.input :free_hours %>
-      <%= f.input :demurrage_rate %>
-      <%= f.input :short_notice %>
-      <%= f.input :comment %>
-      <%= f.submit :create %>
+<div class="booking-new-backgound">
+  <div class="container">
+    <% if @user.oil_company? %>
+    <div class="booking-new-header d-flex justify-content-start pt-5 pb-5">
+      <h2 class="pl-3"><b>Confirm barge</b></h2>
+    </div>
+    <div class="d-flex justify-content-around">
+      <div class="new-booking-left booking-new-font">
+        <%= simple_form_for [@barge, @booking] do |f| %>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Cargo</p>
+          </div>
+          <%= f.input :booker_cargo_id, label:false, collection: @cargos.map { |cargo| [cargo.cargo_name, cargo.id] } %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Freight rate</p>
+          </div>
+        <%= f.input :freight_rate, label:false %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Free hours</p>
+          </div>
+        <%= f.input :free_hours, label:false %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Demurrage rate</p>
+          </div>
+        <%= f.input :demurrage_rate, label:false %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Short notice</p>
+          </div>
+        <%= f.input :short_notice, label:false %>
+        </div>
+      </div>
+      <div class="new-booking-right">
+        <div class="d-flex justify-content-between new-booking-right-padding">
+          <div>
+            <p class="booking-new-font">Comment</p>
+          </div>
+        <%= f.input :comment, label:false %>
+        </div>
+        <div class="btn-forward-login">
+          <i class="fas fa-arrow-right"></i><%= f.button :submit, "Create" %>
+        </div>
+      </div>
+    </div>
     <% end %>
-<% end %>
+
+    <% elsif @user.broker? %>
+    <div class="booking-new-header d-flex justify-content-start pt-5 pb-5">
+      <h2 class="pl-3"><b>Confirm cargo</b></h2>
+    </div>
+    <div class="d-flex justify-content-around">
+      <div class="new-booking-left booking-new-font">
+        <%= simple_form_for [@cargo, @booking] do |f| %>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Barge</p>
+          </div>
+          <%= f.input :booker_barge_id, label:false, collection: @barges.map { |barge| [barge.barge_name, barge.id] } %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Freight rate</p>
+          </div>
+        <%= f.input :freight_rate, label:false %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Free hours</p>
+          </div>
+        <%= f.input :free_hours, label:false %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Demurrage rate</p>
+          </div>
+        <%= f.input :demurrage_rate, label:false %>
+        </div>
+        <div class="d-flex justify-content-between pb-3">
+          <div>
+            <p>Short notice</p>
+          </div>
+        <%= f.input :short_notice, label:false %>
+        </div>
+      </div>
+        <div class="new-booking-right">
+          <div class="d-flex justify-content-between new-booking-right-padding">
+            <div>
+              <p class="booking-new-font">Comment</p>
+            </div>
+          <%= f.input :comment, label:false %>
+          </div>
+          <div class="btn-forward-login">
+            <i class="fas fa-arrow-right"></i><%= f.button :submit, "Create" %>
+          </div>
+        </div>
+      </div>
+    </div>
+        <% end %>
+        <% end %>
+  </div>
+</div>
