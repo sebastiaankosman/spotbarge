@@ -24,15 +24,12 @@ class BargesController < ApplicationController
     @barges = @barges.by_load_window(Date.parse(params[:barge_load_window])) if params[:barge_load_window] && params[:barge_load_window].length.positive?
     # @barges = @barges.by_barge_area(params[:barge_area]) if params[:barge_area]
     # @barges
-
-    @barges_with_coordinates = Barge.geocoded #returns flats with coordinates
-
-    @markers = @barges_with_coordinates.map do |barge|
-      {
-        lat: barge.latitude,
-        lng: barge.longitude
-      }
+    @markers = []
+    # @barges_with_coordinates = Barge.geocoded #returns flats with coordinates
+    @barges.each do |b|
+      @markers << { lat: b.latitude, lng: b.longitude } unless b.latitude.nil? && b.longitude.nil?
     end
+
   end
 
 

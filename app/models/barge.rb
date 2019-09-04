@@ -20,5 +20,5 @@ class Barge < ApplicationRecord
   scope :by_load_window, ->(load_window) { where("barge_load_window = ?", load_window) }
   # scope :by_location, ->(location) { where("barge_area = ?", location) }
   geocoded_by :barge_area
-  after_validation :geocode, if: :will_save_change_to_barge_area?
+  # after_validation :geocode, if: :will_save_change_to_barge_area?
 end

@@ -36,8 +36,8 @@
         <h3>Contact</h3>
         <div class="contact-buttons-card">
           <a class="far fa-comments fa-lg" href="#"></a>
-          <a class="fas fa-phone-volume fa-lg" href="#"></a>
-          <a class="far fa-envelope fa-lg" href="#"></a>
+          <a class="fas fa-phone-volume fa-lg" href="tel:<%= cargo.oil_company.user.phone_number %>"></a>
+          <a class="far fa-envelope fa-lg" href="mailto:<%= cargo.oil_company.user.email %>"></a>
         </div>
         <div class="book-button">
           <div class="btn-home"><%= link_to "Book cargo", new_cargo_path(@cargo) %></div>
