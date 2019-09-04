@@ -209,6 +209,8 @@ barge_attributes = [
     gas_free: 'No',
     barge_area: 'ARA',
     barge_load_window: Date.new(2019,9,9),
+    latitude: '52.403765',
+    longitude: '4.873869',
     broker: Broker.all.sample
   },
   {
@@ -219,6 +221,8 @@ barge_attributes = [
     gas_free: 'Yes',
     barge_area: 'ARA',
     barge_load_window: Date.new(2019,9,10),
+    latitude: '51.888788',
+    longitude: '4.365287',
     broker: Broker.all.sample
   },
   {
@@ -248,6 +252,8 @@ barge_attributes = [
     barge_type: 'CPP',
     gas_free: 'Yes',
     barge_area: 'ARA',
+    latitude: '51.253480',
+    longitude: '4.370100',
     barge_load_window: Date.new(2019,9,13),
     broker: Broker.all.sample
   },
@@ -258,6 +264,8 @@ barge_attributes = [
     barge_type: 'Fuel',
     gas_free: 'Yes',
     barge_area: 'ARA',
+    latitude: '51.439927',
+    longitude: '3.582148',
     barge_load_window: Date.new(2019,9,9),
     broker: Broker.all.sample
   },
@@ -268,6 +276,8 @@ barge_attributes = [
     barge_type: 'Fuel',
     gas_free: 'Yes',
     barge_area: 'ARA',
+    latitude: '51.952741',
+    longitude: '4.139127',
     barge_load_window: Date.new(2019,9,10),
     broker: Broker.all.sample
   },
@@ -278,6 +288,8 @@ barge_attributes = [
     barge_type: 'Fuel',
     gas_free: 'Yes',
     barge_area: 'ARA',
+    latitude: '51.820018',
+    longitude: '4.674357',
     barge_load_window: Date.new(2019,9,11),
     broker: Broker.all.sample
   },
@@ -288,6 +300,8 @@ barge_attributes = [
     barge_type: 'Fuel',
     gas_free: 'Yes',
     barge_area: 'ARA',
+    latitude: '51.458939',
+    longitude: '4.194050',
     barge_load_window: Date.new(2019,9,12),
     broker: Broker.all.sample
   },
@@ -298,6 +312,8 @@ barge_attributes = [
     barge_type: 'Fuel',
     gas_free: 'Yes',
     barge_area: 'ARA',
+    latitude: '51.238409',
+    longitude: '4.374856',
     barge_load_window: Date.new(2019,9,13),
     broker: Broker.all.sample
   },
