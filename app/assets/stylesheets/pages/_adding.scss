@@ -64,4 +64,22 @@
   width: 550px;
 }
 
+.cargo-type-text {
+  font-size: 25px;
+  color: $mgreen;
+}
 
+.gas-free {
+  font-size: 25px;
+  color: $mgreen;
+  // background-color: $white;
+  padding-left: 10px;
+  width: 150px;
+  height: 30px;
+  margin-top: 1px;
+  .form-check {
+    margin-left: 0px;
+    width: 200px;
+    line-height: normal;
+  }
+}

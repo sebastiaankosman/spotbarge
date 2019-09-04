@@ -83,9 +83,10 @@ select#volume, input#cargo_load_window {
 ._volume {
   background: white;
 }
-
-.form-check {
-  margin: 20px;
+.filter-boxes {
+  .form-check {
+    margin: 20px;
+  }
 }
 
 
