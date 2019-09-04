@@ -1,75 +1,68 @@
-<div class="container">
-  <div class="d-flex flex-column">
-    <section id="parties_details" class="d-flex justify-content-between">
-      <div class="d-flex flex-column">
-        <span> Broker </span>
-        <span> <%= @broker.user.first_name %> <%= @broker.user.last_name %></span>
-        <span> <%= @broker.name %> </span>
-        <span> <%= @broker.user.city %></span>
-        <span> <%= @broker.user.location %> </span>
+<div class="nomination-background ml-0 mr-0 pb-5">
+  <div class="container">
+    <div class="nomination-header pt-2 pb-2">
+      <p class="m-0">Nomination</p>
+    </div>
+    <div class="d-flex flex-column pt-5 pb-5 container-nomination-background">
+      <div class="booking-details-top d-flex">
+        <div class="ml-1 mt-2">
+          <i class="boat-logo fas fa-ship"></i>
+        </div>
+        <div class="booking-details-broker">
+          <div class="font-weight-bold">Broker</div>
+          <br>
+          <div> <%= @broker.user.first_name %> <%= @broker.user.last_name %></div>
+          <div> <%= @broker.name %> </div>
+          <div> <%= @broker.user.city %></div>
+          <div> <%= @broker.user.location %> </div>
+        </div>
+        <div class="booking-details-oilcompany">
+          <div class="font-weight-bold">Oil Company</div>
+          <br>
+          <div> <%= @oil_company.user.first_name %> <%= @oil_company.user.last_name %></div>
+          <div> <%= @oil_company.name %> </div>
+          <div> <%= @oil_company.user.city %></div>
+          <div> <%= @oil_company.user.location %> </div>
+        </div>
       </div>
-      <div class="d-flex flex-column">
-        <span> Oil Company </span>
-        <span> <%= @oil_company.user.first_name %> <%= @oil_company.user.last_name %></span>
-        <span> <%= @oil_company.name %> </span>
-        <span> <%= @oil_company.user.city %></span>
-        <span> <%= @oil_company.user.location %> </span>
+      <div class="booking-details d-flex">
+        <div class="booking-details-left pt-5">
+          <p class="mb-5"><%= @booking.created_at %></p>
+          <div class="mb-3"> Barge </div>
+          <div class="mb-3"> Load date </div>
+          <div class="mb-3"> Pre-cargo </div>
+          <div class="mb-3"> Cargo </div>
+          <div class="mb-3"> Load Installation </div>
+          <div class="mb-3"> Discharge Location </div>
+          <div class="mb-3"> Free Hours </div>
+          <div class="mb-3"> Demurrage Rate </div>
+          <div class="mb-3"> Freight Rate </div>
+          <div class="mb-3"> Short Notice </div>
+        </div>
+        <div class="booking-details-right pt-5">
+          <p class="mb-5"><br></p>
+          <div class="mb-3"> <%= @barge.barge_name %> </div>
+          <div class="mb-3"> <%= @barge.barge_load_window %> </div>
+          <div class="mb-3"> <%= @barge.pre_cargo %> </div>
+          <div class="mb-3"> <%= @cargo.cargo_name %> </div>
+          <div class="mb-3"> <%= @cargo.load_location %> </div>
+          <div class="mb-3"> <%= @cargo.discharge_location %> </div>
+          <div class="mb-3"> <%= @booking.free_hours %> </div>
+          <div class="mb-3"> € <%= @booking.demurrage_rate %>/hour </div>
+          <div class="mb-3"> € <%= @booking.freight_rate %>/ton </div>
+          <div class="mb-3"> <%= @booking.short_notice ? 'Yes' : 'No' %> </div>
+        </div>
       </div>
-    </section>
-    <section id="booking_date">
-      <%= @booking.created_at %>
-    </section>
-    <section id="parties_details" class="d-flex flex-column">
-      <!-- START BARGE DETAILS -->
-      <div class="d-flex justify-content-between">
-        <span> Barge </span>
-        <span> <%= @barge.barge_name %> </span>
+
+      <div class="card text-center comment-card-margins">
+        <div class="card-body comment-text mt-2 mb-2">
+          <p class="card-text"><%= @booking.comment %></p>
+        </div>
       </div>
-      <div class="d-flex justify-content-between">
-        <span> Load date </span>
-        <span> <%= @barge.barge_load_window %> </span>
-      </div>
-      <div class="d-flex justify-content-between">
-        <span> Barge </span>
-        <span> <%= @barge.pre_cargo %> </span>
-      </div>
-      <!-- END BARGE DETAILS -->
-      <!-- START CARGO DETAILS -->
-      <div class="d-flex justify-content-between">
-        <span> Cargo </span>
-        <span> <%= @cargo.cargo_name %> </span>
-      </div>
-      <div class="d-flex justify-content-between">
-        <span> Load Installation </span>
-        <span> <%= @cargo.load_location %> </span>
-      </div>
-      <div class="d-flex justify-content-between">
-        <span> Discharge Location </span>
-        <span> <%= @cargo.discharge_location %> </span>
-      </div>
-      <!-- END CARGO DETAILS -->
-      <!-- START BOOKING DETAILS -->
-      <div class="d-flex justify-content-between">
-        <span> Free Hours </span>
-        <span> <%= @booking.free_hours %> </span>
-      </div>
-      <div class="d-flex justify-content-between">
-        <span> Demurrage Rate </span>
-        <span> € <%= @booking.demurrage_rate %>/hour </span>
-      </div>
-      <div class="d-flex justify-content-between">
-        <span> Freight Rate </span>
-        <span> € <%= @booking.freight_rate %>/ton </span>
-      </div>
-      <div class="d-flex justify-content-between">
-        <span> Short Notice </span>
-        <span> <%= @booking.short_notice ? 'Yes' : 'No' %> </span>
-      </div>
-      <div class="d-flex justify-content-between">
-        <span> Comment </span>
-        <span> <%= @booking.comment %> </span>
-      </div>
-      <!-- END BOOKING DETAILS -->
-    </section>
+    </div>
+    <div class="nomination-buttons d-flex mt-5">
+      <div class="btn-back-nomination mr-2"><%= link_to "Back", "/"%></div>
+      <div class="btn-forward-nomination ml-2 fas fa-arrow-right">Send</div>
+    </div>
   </div>
 </div>
