@@ -19,6 +19,9 @@ gem "chartkick"
 gem 'groupdate'
 gem 'bootstrap-datepicker-rails'
 gem 'geocoder'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

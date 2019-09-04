@@ -65,6 +65,13 @@ class BookingsController < ApplicationController
       # @booker = Barge.find(@booking.booker_barge_id)
       # @booked = Cargo.find @booking.booked_cargo_id
     end
+    # Creating PDF file.
+    # respond_to do |format|
+    #   format.html
+    #   format.pdf do
+    #     render pdf: "booking_confirmation" # Excluding ".pdf" extension.
+    #   end
+    # end
   end
 
   private
