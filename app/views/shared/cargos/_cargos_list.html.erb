@@ -40,7 +40,7 @@
           <a class="far fa-envelope fa-lg" href="mailto:<%= cargo.oil_company.user.email %>"></a>
         </div>
         <div class="book-button">
-          <div class="btn-home"><%= link_to "Book cargo", new_cargo_path(@cargo) %></div>
+          <div class="btn-home"> <%= link_to "Book cargo", new_cargo_booking_path([cargo, Booking.new]) %> </div>
         </div>
       </div>
     </div>

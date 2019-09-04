@@ -9,7 +9,7 @@
       <%= f.input :capacity %>
       <div class="barge-area">
         <%= f.label :barge_area %>
-        <%= f.input :barge_area, as: :check_boxes, collection: [['ARA', 'ARA'], ['Rhine', 'Rhine'], ['Northern-Canals', 'Northern-Canals'], ['Upper-Rhine', 'Upper-Rhine']] %>
+        <%= f.input :barge_area, as: :check_boxes, collection: @barge_area %>
       </div>
       <div class="date-field">
         <%= f.label :date %>
