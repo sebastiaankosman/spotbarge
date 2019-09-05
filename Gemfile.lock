@@ -101,6 +101,7 @@ GEM
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pdfkit (0.8.4.1)
     pg (0.21.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -146,6 +147,8 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     redis (4.1.2)
+    render_anywhere (0.0.12)
+      rails (>= 3.0.7)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -211,12 +214,14 @@ DEPENDENCIES
   groupdate
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
+  pdfkit
   pg (~> 0.21)
   pry-byebug
   pry-rails
   puma
   rails (= 5.2.3)
   redis
+  render_anywhere
   sassc-rails
   simple_form
   spring

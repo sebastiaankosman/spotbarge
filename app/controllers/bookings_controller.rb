@@ -67,13 +67,22 @@ class BookingsController < ApplicationController
       # @booked = Cargo.find @booking.booked_cargo_id
     end
     # Creating PDF file.
-    # respond_to do |format|
-    #   format.html
-    #   format.pdf do
-    #     render pdf: "booking_confirmation" # Excluding ".pdf" extension.
-    #   end
-    # end
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "booking_confirmation" # Excluding ".pdf" extension.
+      end
+    end
   end
+
+  # def generate_pdf
+  #   respond_to do |format|
+  #     format.html
+  #     format.pdf do
+  #       render pdf: "booking_confirmation" # Excluding ".pdf" extension.
+  #     end
+  #   end
+  # end
 
   private
 
