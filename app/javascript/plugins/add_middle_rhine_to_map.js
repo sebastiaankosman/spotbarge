@@ -32,7 +32,7 @@ map.on('load', function () {
         "source": "middle_rhine",
         'paint': {
           'fill-color': '#F7DB64',
-          'fill-opacity': 0.3,
+          'fill-opacity': 0.17,
           'fill-outline-color': 'rgba(255,255,255, 1)',
           }
   }, firstSymbolId);
