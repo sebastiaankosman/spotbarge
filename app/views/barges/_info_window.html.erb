@@ -1,0 +1,18 @@
+    <div class="cargo-specifics">
+          <div class="specifics-details">
+            <h3>Specifics</h3>
+            <div>Area</div>
+            <div>Last 3 cargo's</div>
+            <div>Barge gasfree</div>
+            <div>Load date </div>
+            <div>Volume (m³) </div>
+          </div>
+          <ul class="list-unstyled results-specifics">
+            <li><%= barge.barge_area %></li>
+            <li><%= barge.pre_cargo %></li>
+            <li><%= barge.gas_free ? 'Yes' : 'No' %></li>
+            <li><%= barge.barge_load_window %></li>
+            <li><%= barge.capacity %></li>
+          </ul>
+        </div>
+
