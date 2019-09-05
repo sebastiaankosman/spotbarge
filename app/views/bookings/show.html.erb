@@ -62,7 +62,12 @@
     </div>
     <div class="nomination-buttons d-flex mt-5">
       <div class="btn-back-nomination mr-2"><%= link_to "Back", "/"%></div>
-      <div class="btn-forward-nomination ml-2 fas fa-arrow-right">Send</div>
+      <div class="btn-forward-nomination ml-2 fas fa-arrow-right">
+        <%= link_to "Download PDF",
+            barge_booking_download_path(@barge, @booking, format: "pdf"),
+            target: "_blank",
+            class: "btn btn-default" %>
+      </div>
     </div>
   </div>
 </div>

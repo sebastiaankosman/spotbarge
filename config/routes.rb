@@ -2,12 +2,17 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+
   resources :barges do
-    resources :bookings
+    resources :bookings do
+      resource :download, only: [:show]
+    end
   end
 
   resources :cargos do
-    resources :bookings
+    resources :bookings do
+      resource :download, only: [:show]
+    end
   end
 
   get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
