@@ -6,28 +6,43 @@
     <%= simple_form_for(@barge) do |f| %>
       <div class="booking-form pb-5">
         <div class="booking-form-left">
-        <%= f.input :barge_name %>
-        <%= f.input :capacity %>
-          <div class="barge-area">
-        <%= f.label :barge_area %>
-        <%= f.input :barge_area, as: :check_boxes, collection: @barge_area %>
-          </div>
+          <%= f.input :barge_name %>
+          <%= f.input :capacity %>
+          <%= f.input :pre_cargo %>
           <div class="date-field">
-        <%= f.label :date %>
-        <%= f.date_field :barge_load_window %>
+            <%= f.label :date %>
+            <%= f.date_field :barge_load_window %>
           </div>
-      <div class="barge-type">
-        <%= f.label :barge_type %>
-        <%= f.input :barge_type, as: :check_boxes, collection: @barge_type %>
-      </div>
-      <div class="gas-free">
-        <%= f.label :gas_free %>
-        <%= f.input :gas_free %>
-      </div>
-      <div class="pre-cargo">
-        <%= f.input :pre_cargo %>
-      </div>
-<div class="btn-forward-login mt-5"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Enter Cargo", class: "btn-forward-login" %></div>
+        </div>
+        <div class="booking-form-right">
+          <div class="barge-type d-flex justify-content-between">
+            <div class="cargo-type-text">
+              <div class="cargo-type-text">
+                <p>Barge area</p>
+              </div>
+            </div>
+          <!-- <%= f.label :barge_area %> -->
+          <%= f.input :barge_area, label:false, collection: @barge_area %>
+          </div>
+
+
+          <div class="barge-type d-flex justify-content-between">
+            <div class="cargo-type-text">
+              <p>Barge type</p>
+            </div>
+            <!-- <%= f.label :barge_type %> -->
+            <%= f.input :barge_type, label:false, collection: @barge_type %>
+          </div>
+          <div class="gas-free align-middle">
+
+
+            <%= f.input :gas_free %>
+          </div>
+          <div class="btn-forward-login mt-5"><i class="fas fa-arrow-right"></i><%= f.button :submit, "Enter Cargo", class: "btn-forward-login" %></div>
+        </div>
+
+
+
 
       </div>
     <% end %>
