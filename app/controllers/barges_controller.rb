@@ -35,12 +35,14 @@ class BargesController < ApplicationController
     @barge = Barge.new
     @barges = Barge.where(broker_id: current_user.broker.id)
     barge_type
+    barge_area
   end
 
   def create
-    @barge = Barge.find(barge_params)
+    @barge = Barge.new(barge_params)
+    @barge.broker_id = current_user.broker.id
     if @barge.save!
-      redirect_to barges_path(@barge)
+      redirect_to new_barge_path
     else
       render :new
     end
