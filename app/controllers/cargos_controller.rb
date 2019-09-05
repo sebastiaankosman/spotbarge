@@ -34,9 +34,11 @@ class CargosController < ApplicationController
   end
 
   def create
-    @cargo = Cargo.find(cargo_params)
+    @cargo = Cargo.new(cargo_params)
+    @cargo.oil_company_id = current_user.oil_company.id
+    @cargo.discharge_location = params[:cargo][:discharge_location]
     if @cargo.save!
-      redirect_to cargos_index_path(@cargo)
+      redirect_to new_cargo_path
     else
       render :new
     end
