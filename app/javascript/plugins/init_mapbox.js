@@ -37,6 +37,8 @@ const initMapbox = () => {
   element.style.backgroundSize = 'contain';
   element.style.width = '40px';
   element.style.height = '40px';
+  element.style.margin = '0';
+
   console.log(marker)
 
     new mapboxgl.Marker(element)
