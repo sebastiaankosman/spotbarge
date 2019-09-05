@@ -30,11 +30,11 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-  <%= render 'shared/navbar' %>
+  <%= render 'shared/navbar' unless @disable_navbar %>
 <!--     <div class="notice"><%= notice %></div>
   <div class="alert"><%= alert %></div> -->
   <%= yield %>
-  <%= render 'shared/footer' %>
+  <%= render 'shared/footer' unless @disable_navbar %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
 </body>
