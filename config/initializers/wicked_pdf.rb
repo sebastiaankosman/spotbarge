@@ -9,5 +9,5 @@
 # https://github.com/mileszs/wicked_pdf/blob/master/README.md
 
 WickedPdf.config = {
-  exe_path: (Rails.env.production? ? '/path/to/bin/wkhtmltopdf' : '/usr/local/bin/wkhtmltopdf'
+  exe_path: (Rails.env.production? ? '/path/to/bin/wkhtmltopdf' : '/usr/local/bin/wkhtmltopdf')
 }
