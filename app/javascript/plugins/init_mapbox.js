@@ -28,20 +28,25 @@ const initMapbox = () => {
   const markers = JSON.parse(mapElement.dataset.markers);
   markers.forEach((marker) => {
 
-    const element = document.createElement('div');
+  const element = document.createElement('div');
+  console.log(element);
   element.className = 'marker';
-  element.style.backgroundImage = `url('https://placekitten.com/g/50/50')`;
+  element.style.backgroundImage = 'url(https://i.imgur.com/bjRVknN.png)';
   element.style.backgroundSize = 'contain';
-  element.style.width = '25px';
-  element.style.height = '25px';
+  element.style.width = '40px';
+  element.style.height = '40px';
+  console.log(marker)
 
-
-    new mapboxgl.Marker()
+    new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
   });
  }
 }
+
+
+
+
 
 // markers.forEach((marker) => {
 
