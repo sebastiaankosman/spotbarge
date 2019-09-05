@@ -1,4 +1,6 @@
 class BargesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @barges = Barge.all
     # [ARA, Rhine]

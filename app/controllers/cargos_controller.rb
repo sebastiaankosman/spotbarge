@@ -1,4 +1,6 @@
 class CargosController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @cargos = Cargo.all
     if params[:load_location]
