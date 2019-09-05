@@ -3,10 +3,11 @@
 "name": "name_labels_points",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "id": 1, "name": "ARA" }, "geometry": { "type": "Point", "coordinates": [ 5.225183217656716, 52.591751653329034 ] } },
-{ "type": "Feature", "properties": { "id": 2, "name": "Rhine" }, "geometry": { "type": "Point", "coordinates": [ 7.403977945667564, 50.81809106656749 ] } },
-{ "type": "Feature", "properties": { "id": 3, "name": "Middle-Rhine" }, "geometry": { "type": "Point", "coordinates": [ 8.135857503911279, 48.482480814892213 ] } },
-{ "type": "Feature", "properties": { "id": 4, "name": "Upper-Rhine" }, "geometry": { "type": "Point", "coordinates": [ 11.484189043001619, 53.157471191337692 ] } }
+{ "type": "Feature", "properties": { "id": 1, "name": "ARA" }, "geometry": { "type": "Point", "coordinates": [ 4.799900257481319, 51.50103483520283 ] } },
+{ "type": "Feature", "properties": { "id": 2, "name": "Middle_Rhine" }, "geometry": { "type": "Point", "coordinates": [ 7.40804431141787, 50.56485777329263 ] } },
+{ "type": "Feature", "properties": { "id": 3, "name": "Upper-Rhine" }, "geometry": { "type": "Point", "coordinates": [ 8.135857503911279, 48.482480814892213 ] } },
+{ "type": "Feature", "properties": { "id": 4, "name": "Northen-canals" }, "geometry": { "type": "Point", "coordinates": [ 11.484189043001619, 53.157471191337692 ] } }
 ]
 }
+
 
