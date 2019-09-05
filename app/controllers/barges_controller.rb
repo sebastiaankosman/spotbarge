@@ -27,7 +27,11 @@ class BargesController < ApplicationController
     @markers = []
     # @barges_with_coordinates = Barge.geocoded #returns flats with coordinates
     @barges.each do |b|
-      @markers << { lat: b.latitude, lng: b.longitude } unless b.latitude.nil? && b.longitude.nil?
+      @markers << {
+        lat: b.latitude,
+        lng: b.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { barge: b })
+      }
     end
   end
 
