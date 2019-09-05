@@ -1,6 +1,6 @@
 class ErrorsController < ApplicationController
   def show
-    @disable_navbar = true;
+    @disable_navbar = true
     status_code = params[:code] || 500
     flash.alert = "Status #{status_code}"
     render status_code.to_s, status: status_code
