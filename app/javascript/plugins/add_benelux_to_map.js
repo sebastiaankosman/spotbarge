@@ -47,6 +47,23 @@ map.on('load', function () {
           }
   }, firstSymbolId);
 
+  // map.addLayer({
+  //       "id": "benelux_label",
+  //       "type": "symbol",
+  //       "source": "benelux",
+  //       paint: {
+  //         "text-color": "#F7DB64",
+  //         },
+  //       "layout": {
+  //           "text-field": "ARA",
+  //           "text-size": 15,
+  //           "text-variable-anchor": ["top", "bottom", "left", "right"],
+  //           "text-radial-offset": 0.5,
+  //           "text-justify": "auto",
+  //           "icon-image": ["concat", ["get", "icon"], "-15"]
+  //       }
+  //   });
+
 
 
     map.on('click', 'benelux', function (e) {

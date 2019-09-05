@@ -1,0 +1,5 @@
+meta_product_name: "spotbarge"
+meta_title: "spotbarge - The platform for inland barging Europe"
+meta_description: "Relevant description"
+meta_image: "barge3.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
