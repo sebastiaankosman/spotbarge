@@ -7,6 +7,7 @@ import { addNorthgermanyToMap } from '../plugins/add_northgermany_to_map';
 import { addMiddleRhineToMap } from '../plugins/add_middle_rhine_to_map';
 import { addUpperRhineToMap } from '../plugins/add_upper_rhine_to_map';
 import { addRhineLineToMap } from '../plugins/add_rhine_line_to_map.js';
+import { addAreaLabelsToMap } from '../plugins/add_area_labels_to_map.js';
 
 initUpdateNavbarOnScroll()
 
@@ -141,3 +142,4 @@ addNorthgermanyToMap();
 addMiddleRhineToMap ();
 addUpperRhineToMap ();
 addRhineLineToMap();
+addAreaLabelsToMap();
