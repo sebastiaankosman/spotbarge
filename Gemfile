@@ -24,7 +24,6 @@ gem 'wicked_pdf'
 gem 'render_anywhere'
 gem 'wkhtmltopdf-binary'
 
-
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
