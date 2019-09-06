@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer <%= request.env['PATH_INFO'] == '/' ? 'mt-4' : '' %>">
   <ul class="list-group list-group-horizontal">
     <li class="list-group-item footer-item"><%= link_to "Cookie policy", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"%></li>
     <li class="list-group-item footer-item"><%= link_to "Terms and Conditions", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"%></li>
