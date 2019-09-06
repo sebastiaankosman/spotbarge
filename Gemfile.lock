@@ -136,6 +136,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.2.3)
       actionpack (= 5.2.3)
       activesupport (= 5.2.3)
@@ -198,6 +203,7 @@ GEM
     wicked_pdf (1.4.0)
       activesupport
     wkhtmltopdf-binary (0.12.4)
+    wkhtmltopdf-heroku (2.12.5.0)
 
 PLATFORMS
   ruby
@@ -220,6 +226,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.2.3)
+  rails_12factor
   redis
   render_anywhere
   sassc-rails
@@ -231,6 +238,7 @@ DEPENDENCIES
   webpacker
   wicked_pdf
   wkhtmltopdf-binary
+  wkhtmltopdf-heroku
 
 RUBY VERSION
    ruby 2.6.3p62
