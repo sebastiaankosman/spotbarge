@@ -8,7 +8,7 @@ class Download
   end
 
   def to_pdf(current_user)
-    kit = PDFKit.new(as_html(current_user), page_size: 'A4', dpi: 1600)
+    kit = PDFKit.new(as_html(current_user), page_size: 'A4', dpi: 300)
     kit.to_file("tmp/booking.pdf")
   end
 
